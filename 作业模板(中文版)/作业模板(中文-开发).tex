@@ -1,0 +1,114 @@
+% !TEX program = pdflatex
+% !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
+% 作业模板
+\documentclass[UTF8,10pt,a4paper]{article}
+\usepackage{ctex}% 中文支持
+% 将全角句号映射为全角句点，需xelatex编译
+% \catcode`\。=\active
+% \newcommand{。}{．}
+% 作业信息
+\newcommand{\CourseName}{课程名称}
+\newcommand{\CourseCode}{课程代码}
+\newcommand{\Semester}{20-20学年第学期}
+\newcommand{\ProjectName}{作业 }
+\newcommand{\DueTimeType}{截止日期}
+\newcommand{\DueTime}{20. . （周）}
+\newcommand{\StudentName}{陈稼霖}
+\newcommand{\StudentID}{45875852}
+\usepackage[vmargin=1in,hmargin=.5in]{geometry}% 页边距
+\usepackage{fancyhdr}% 页眉和页脚
+\usepackage{lastpage}% 返回末页页码
+\usepackage{calc}% 返回文本宽度
+\pagestyle{fancy}% 全局页眉和页脚风格
+\fancyhf{}% 清除预设的页眉和页脚
+\fancyhead[L]{\CourseName}% 页眉左
+\fancyhead[C]{\ProjectName}% 页眉中
+\fancyhead[R]{\StudentName}% 页眉右
+\fancyfoot[R]{\thepage\ / \pageref{LastPage}}% 页脚右
+\setlength\headheight{12pt}% 页眉高
+\fancypagestyle{FirstPageStyle}{% 首页页眉和页脚风格
+    \fancyhf{}% 清除预设的页眉和页脚
+    \fancyhead[L]{\CourseName\\
+        \CourseCode\\
+        \Semester}% 页眉左
+    \fancyhead[C]{{\Huge\bfseries\ProjectName}\\
+        \DueTimeType\ : \DueTime}% 页眉中
+    \fancyhead[R]{姓名 : \makebox[\widthof{\StudentID}][s]{\StudentName}\\
+        学号 : \StudentID\\
+        成绩 : \underline{\makebox[\widthof{\StudentID}]{}}}% 页眉右
+    \fancyfoot[R]{\thepage\ / \pageref{LastPage}}% 页脚右
+    \setlength\headheight{36pt}% 页眉高
+}
+\usepackage{amsmath,amssymb,amsthm,bm}% 基础数学支持，特殊数学字符，自定义定理，公式内加粗
+\allowdisplaybreaks[4]% 公式跨页
+\newtheoremstyle{Problem}% 定理风格名称
+{}% 定理上方空间尺寸，留空为默认
+{}% 定理下方空间尺寸，留空为默认
+{}% 定理主体字体
+{}% 定理缩进量
+{\bfseries}% 定理开头字体
+{.}% 定理开头后所接标点
+{ }% 定理开头后所接空间尺寸，空格为默认词间距
+{第\thmnumber{ #2}\thmname{ #1}\thmnote{ (#3)} 得分: \underline{\qquad\qquad}}% 定理开头格式，留空为默认
+\theoremstyle{Problem}% 设定定理风格
+\newtheorem{prob}{题}% 题目
+\newtheoremstyle{Solution}% 定理风格名称
+{}% 定理上方空间尺寸，留空为默认
+{}% 定理下方空间尺寸，留空为默认
+{}% 定理主体文本字体
+{}% 定理缩进量
+{\bfseries}% 定理开头字体
+{:}% 定理开头后所接标点
+{ }% 定理开头后所接空间尺寸，空格为默认词间距
+{\thmname{#1}}% 定理开头格式
+\makeatletter
+\def\@endtheorem{\qed\endtrivlist\@endpefalse}% 题解后添加qed符号（黑色空心小正方形）
+\makeatother
+\theoremstyle{Solution}% 设定定理风格
+\newtheorem*{sol}{解}% 题解
+% \usepackage{mathrsfs}% 公式内花体字母 - \mathscr{}
+% \usepackage{esint}% 特殊积分号
+% \providecommand{\abs}[1]{\left\lvert#1\right\rvert}% 绝对值 - \abs{}
+% \providecommand{\norm}[1]{\left\lVert#1\right\rVert}% 范数 - \norm{}
+% \providecommand{\bra}[1]{\left\langle#1\right\rvert}% 左矢 - \bra{}
+% \providecommand{\ket}[1]{\left\lvert#1\right\rangle}% 右矢 - \ket{}
+% \providecommand{\braket}[2]{\left\langle#1\vert#2\right\rangle}% 右矢接左矢 - \braket{}{}
+% \usepackage{graphicx}% 图片 -
+% \begin{figure}[htbp]% 图片位置优先顺序：当地，页顶，页底，另起一页
+%     \centering% 图片居中
+%     \includegraphics[scale=.5]{图片文件名/路径名}
+%     \caption{图片文字说明}
+%     \label{图片引用代码}
+% \end{figure}
+% \usepackage{float}% 强制设定图片位置 - [H]
+% \usepackage{subfigure}% figure环境内多子图 -
+% \begin{figure}[htbp]% figure环境位置优先顺序：当地、页顶、页底、另起一页
+%     \centering% figure环境居中
+%     \subfigure[子图文字说明]{
+%         \label{子图引用代码}
+%         \includegraphics[width=0.45\textwidth]{子图文件名/路径}}
+%     \subfigure[子图文字说明]{
+%         \label{子图引用代码}
+%         \includegraphics[width=0.45\textwidth]{子图文件名/路径}}
+%     \caption{总文字说明}
+%     \label{总引用代码}
+% \end{figure}
+% \usepackage{multirow}% 表格内多行单元格合并
+% \usepackage{booktabs}% 三线表 - \toprule, \midrule, \bottemrule
+% \usepackage{longtable}% 表格跨页 -
+% \begin{center}% 表格居中
+%     \begin{longtable}{lcr}% 表格列对齐: l = 居左, c = 居中, r = 居右
+%         \caption{表格文字说明}
+%         \label{表格引用代码}
+%     \end{longtable}
+% \end{center}
+% \usepackage[version=4]{mhchem}% 化学式 - \ce{}
+\begin{document}
+\thispagestyle{FirstPageStyle}% 设定首页页眉和页脚风格
+\begin{prob}[问题标题]
+    此乃问题描述。
+\end{prob}
+\begin{sol}
+    此为解。
+\end{sol}
+\end{document}

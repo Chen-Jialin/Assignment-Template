@@ -1,0 +1,111 @@
+% !TEX program = pdflatex
+% !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
+% Assignment Template
+\documentclass[UTF8,10pt,a4paper]{article}
+\usepackage[scheme=plain]{ctex}% Chinese support
+% assignment information
+\newcommand{\CourseName}{Course Name}
+\newcommand{\CourseCode}{Course Code}
+\newcommand{\Semester}{Season, 20}
+\newcommand{\ProjectName}{Assignment }
+\newcommand{\DueTimeType}{Due Date}
+\newcommand{\DueTime}{ , 20 (day)}
+\newcommand{\StudentName}{陈稼霖}
+\newcommand{\StudentID}{45875852}
+\usepackage[vmargin=1in,hmargin=.5in]{geometry}% page margin
+\usepackage{fancyhdr}% header and foot
+\usepackage{lastpage}% return the page number of the last page
+\usepackage{calc}% return the width of the text
+\pagestyle{fancy}% global header and foot style
+\fancyhf{}% clear the default header and foot
+\fancyhead[L]{\CourseName}% the left of the header
+\fancyhead[C]{\ProjectName}% the center of the header
+\fancyhead[R]{\StudentName}% the right of the header
+\fancyfoot[R]{\thepage\ / \pageref{LastPage}}% the right of the foot
+\setlength\headheight{12pt}% the height of the header
+\fancypagestyle{FirstPageStyle}{% the header and foot style of the first page
+    \fancyhf{}% clear the default header and foot
+    \fancyhead[L]{\CourseName\\
+        \CourseCode\\
+        \Semester}% the left of the header
+    \fancyhead[C]{{\Huge\bfseries\ProjectName}\\
+        \DueTimeType\ : \DueTime}% the center of the header
+    \fancyhead[R]{Name : \makebox[\widthof{\StudentID}][s]{\StudentName}\\
+        Student ID\@ : \StudentID\\
+        Score : \underline{\makebox[\widthof{\StudentID}]{}}}% the right of the header
+    \fancyfoot[R]{\thepage\ / \pageref{LastPage}}% the right of the foot
+    \setlength\headheight{36pt}% the height of the header
+}
+\usepackage{amsmath,amssymb,amsthm,bm}% basic math support, special math symbols, theorem custom, bold in equation
+\allowdisplaybreaks[4]% cross-page equations
+\newtheoremstyle{Problem}% theorem style name
+{}% space above theorem, being left empty means default
+{}% space below theorem, being left empty means default
+{}% theorem body font
+{}% theorem indent amount
+{\bfseries}% theorem head font
+{.}% punctuation after theorem head
+{ }% space after theorem head, whitespace means normal interword space
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)} Score: \underline{\qquad\qquad}}% theorem head spec, being left empty means default
+\theoremstyle{Problem}% set the theorem style
+\newtheorem{prob}{Problem}% problem
+\newtheoremstyle{Solution}% theorem style name
+{}% space above theorem, being left empty means default
+{}% space below theorem, being left empty means default
+{}% theorem body font
+{}% theorem indent amount
+{\bfseries}% theorem head font
+{:}% punctuation after theorem head
+{ }% space after theorem head, whitespace means normal interword space
+{\thmname{#1}}% theorem head spec, being left empty means default
+\makeatletter
+\def\@endtheorem{\qed\endtrivlist\@endpefalse}% add qed symbols (black hollow small square) to the end of solutions
+\makeatother
+\theoremstyle{Solution}% set the theorem style
+\newtheorem*{sol}{Solution}% solution
+% \usepackage{mathrsfs}% non-CM calligraphic letters in equation - \mathscr{}
+% \usepackage{esint}% special integral signs
+% \providecommand{\abs}[1]{\left\lvert#1\right\rvert}% absolute - \abs
+% \providecommand{\norm}[1]{\left\lVert#1\right\rVert}% norm - \norm
+% \providecommand{\bra}[1]{\left\langle#1\right\rvert}% bra - \bra{}
+% \providecommand{\ket}[1]{\left\lvert#1\right\rangle}% ket - \ket{}
+% \providecommand{\braket}[2]{\left\langle#1\vert#2\right\rangle}% contiguous ket after bra - \braket{}{}
+% \usepackage{graphicx}% graphics -
+% \begin{figure}[htbp]% set the position of the figure
+%     \centering% figure centering
+%     \includegraphics[scale=.5]{figure-file-name}
+%     \caption{figure-caption}
+%     \label{figure-label}
+% \end{figure}
+% \usepackage{float}% set the position of figures mandatorily - [H]
+% \usepackage{subfigure}% subfigures in the figure environment -
+% \begin{figure}[htbp]set the position of the figure environment
+%     \centering% figure environment centering
+%     \subfigure[subfigure-caption]{
+%         \label{subfigure-label}
+%         \includegraphics[width=0.45\textwidth]{subfigure-file-name}}
+%     \subfigure[subfigure-caption]{
+%         \label{subfigure-label}
+%         \includegraphics[width=0.45\textwidth]{subfigure-file-name}}
+%     \caption{figure caption}
+%     \label{figure-label}
+% \end{figure}
+% \usepackage{multirow}% tables with merged multi-row cells
+% \usepackage{booktabs}% three-line tables - \toprule, \midrule, \bottemrule
+% \usepackage{longtable}% cross-page tables -
+% \begin{center}% table centering
+%     \begin{longtable}{lcr}% table columns aligning: l = left-aligning, c = center-aligning, r = right-aligning
+%         \caption{table-caption}
+%         \label{table-label}
+%     \end{longtable}
+% \end{center}
+% \usepackage[version=4]{mhchem}% chemistry equations - \ce{}
+\begin{document}
+\thispagestyle{FirstPageStyle}% set the style of head and foot of the first page
+\begin{prob}[Problem title]
+    This is the problem.
+\end{prob}
+\begin{sol}
+    This is the solution.
+\end{sol}
+\end{document}
