@@ -5,5 +5,4 @@ Cute and elegant, polyfunctional and robust LaTeX Template, applicable to variou
 
 ## TODO
 
-- 比较姓名和ID的长度并选出较长的那个
 - 中英文支持

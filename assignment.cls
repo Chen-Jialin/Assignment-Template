@@ -46,9 +46,9 @@
             #3}
         \fancyhead[C]{{\Huge\bfseries#4}\\
             #5 : #6}
-        \fancyhead[R]{Name : \makebox[\widthof{#8}][s]{#7}\\
-            Student ID : #8\\
-            Grade : \underline{\makebox[\widthof{#8}]{}}}
+        \fancyhead[R]{Name : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#7}\\
+            Student ID : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#8}\\
+            Grade : \underline{\makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{}}}
         \fancyfoot[R]{\thepage\ / \pageref{LastPage}}
         \setlength\headheight{38pt}
     }
