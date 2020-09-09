@@ -15,7 +15,7 @@
 - 文献引用
 等功能.
 
-Cute and elegant, polyfunctional and robust LaTeX Template, applicable to various scenarios such as
+Cute and elegant, poly-functional and robust LaTeX template, applicable to various scenarios such as
 - assignments
 - experiment reports
 - course projects
@@ -32,6 +32,12 @@ It is bilingual and supporting functions including
 同时支持\pdfLaTeX和\XeLaTeX.
 
 Both \pdfLaTeX and \XeLaTeX work.
+
+## 效果展示 Examples
+
+![中文版效果图](Examples/AssignmentExample-Zh.jpg)
+
+![English example](Examples/AssignmentExample-En.jpg)
 
 ## 待做 TODO
 
