@@ -1,24 +1,25 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{assignment}[2020/09/08 Class for notes]
+\ProvidesClass{assignment}[2020/09/08 Class for assignments]
 
-% Load article class with A4 paper and 10pt font
-\LoadClass[a4paper, 10pt]{article}
+% Load class
+
+\LoadClass[a4paper, 10pt]{article} % Load article class with A4 paper and 10pt font
 
 % Call packages
 
-\RequirePackage[UTF8]{ctex} % Chinese support
+\RequirePackage[UTF8]{ctex} % 中文支持 Chinese support
 
-\RequirePackage[vmargin=1in,hmargin=.5in]{geometry} % page margin
+\RequirePackage[vmargin=1in,hmargin=.5in]{geometry} % 页边距 Page margin
 
 % 自定义页眉和页脚 Header and footer customization
-\RequirePackage{fancyhdr} % 页眉和页脚 Header and footer
+\RequirePackage{fancyhdr} % 页眉和页脚 Header & footer
 \usepackage{xparse} % 多可选参数的自定义命令 Newcommand with multiple optional arguements
 \RequirePackage{lastpage} % 返回末页页码 Return the page number of the last page
 \RequirePackage{calc} % 返回文本宽度 Return the width of the text
 
 % 数学公式 Mathematical equations
 \RequirePackage{amsmath, amssymb, amsthm, bm} % 基础数学支持, 特殊数学符号, 自定义定理, 公式内加粗 Basic math support, special math symbols, theorem custom, bold in equation
-\allowdisplaybreaks[4]% 公式跨页 Cross-page equations
+\allowdisplaybreaks[4] % 公式跨页 Cross-page equations
 
 % 图片 Figures
 \RequirePackage{graphicx} % 图片 Graphics
@@ -39,10 +40,10 @@
 % 其他 Others
 \RequirePackage{ulem} % 各式下划线和删除标记 Various underlines & deletion notes
 
-% 自定义页眉、页脚、题目和题解
-\pagestyle{fancy}% 全局页眉和页脚风格 Global header and footer style
-\fancyhf{}% 清除预设的页眉和页脚 Clear the default header and foot
-% #1 风格：缺省 - 中文风格；星号（*）- 英文风格 Style, default - Chinese style; star sign (*) - English style
+% 页眉和页脚 Header & footer
+\pagestyle{fancy} % 全局页眉和页脚风格 Global header and footer style
+\fancyhf{} % 清除预设的页眉和页脚 Clear default header and footer
+% #1 风格：缺省 - 中文风格；星号（*）- 英文风格 Style: default - Chinese style; star sign (*) - English style
 % #2 课程名称 Course name
 % #3 课程代码 Course code
 % #4 学期 Semeter
@@ -52,68 +53,71 @@
 % #8 学号 Student ID
 \NewDocumentCommand{\ProjectInfos}{ s m m m m m m m }
 {
-    \fancyhead[L]{#2}
-    \fancyhead[C]{#5}
-    \fancyhead[R]{#7}
-    \setlength\headheight{14pt} % 页眉高 The height of the header
-    \fancypagestyle{FirstPage} % 首页风格 First page style
+    \fancyhead[L]{#2} % 页眉左 Left of the header
+    \fancyhead[C]{#5} % 页眉中 Center of the header
+    \fancyhead[R]{#7} % 页眉右 Right of the header
+    \setlength\headheight{14pt} % 页眉高 Height of the header
+    \fancypagestyle{FirstPage} % 首页页眉 First-page header
     {
-        \fancyhf{}
+        \fancyhf{} % 清除预设的页眉和页脚 Clear default header and footer
         \fancyhead[L]{#2\\
             #3\\
-            #4}
+            #4} % 页眉左 Left of the header
         \fancyhead[C]{{\Huge\bfseries#5}\\
-            #6}
-        \setlength\headheight{38pt}
+            #6} % 页眉中 Center of the header
+        \setlength\headheight{38pt} % 页眉高 Height of the header
         \IfBooleanTF{#1}
-        { % Star note (*) - English style first page header, problem and solution
+        { % Star note (*) - English-style first-page header
             \fancyhead[R]{Name : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#7}\\
                 Student ID : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#8}\\
-                Grade : \underline{\makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{}}}
+                Grade : \underline{\makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{}}} % Right of the header
         }
-        { % 无星号（*）- 中文风格首页页眉、题目和题解
+        { % 无星号（*）- 中文风格首页页眉
             \fancyhead[R]{姓名 : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#7}\\
                 学号 : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#8}\\
-                成绩 : \underline{\makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{}}}
+                成绩 : \underline{\makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{}}} % 页眉右
         }
-        \fancyfoot[R]{\thepage\ / \pageref{LastPage}}
+        \fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右：<当前页码> / <总页数>
     }
-    \thispagestyle{FirstPage}
+    \thispagestyle{FirstPage} % 设置首页页眉风格为FirstPage Set header style of first page to be FirstPage
 }
-\fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右: <当前页码> / <总页数> The right of the footer: <current page number> / <total page number>
+\fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右：<当前页码> / <总页数> The right of the footer: <current page number> / <total page number>
 
-\newtheoremstyle{Problem}% 定理风格名称
-{}% 定理上方空间尺寸，留空为默认
-{}% 定理下方空间尺寸，留空为默认
-{}% 定理主体字体
-{}% 定理缩进量
-{\bfseries}% 定理开头字体
-{.}% 定理开头后所接标点
-{ }% 定理开头后所接空间尺寸，空格为默认词间距
-{第\thmnumber{ #2}\thmname{ #1}\thmnote{ (#3)} 得分: \underline{\qquad\qquad}}% 定理开头格式，留空为默认
-\theoremstyle{Problem}% 设定定理风格
-\newtheorem{ti}{题}
-\newtheorem{prob}{Problem}% 题目
-\newtheoremstyle{Solution}% 定理风格名称
-{}% 定理上方空间尺寸，留空为默认
-{}% 定理下方空间尺寸，留空为默认
-{}% 定理主体文本字体
-{}% 定理缩进量
-{\bfseries}% 定理开头字体
-{:}% 定理开头后所接标点
-{ }% 定理开头后所接空间尺寸，空格为默认词间距
-{\thmname{#1}}% 定理开头格式
+% 题目和题解风格 Problem and solution style
+\newtheoremstyle{Problem}% 定理风格名称 Theorem style name
+{} % 定理上方空间尺寸，留空为默认 Space above theorem, being left empty means default
+{} % 定理下方空间尺寸，留空为默认 Space below theorem, being left empty means default
+{} % 定理主体字体 Theorem body font
+{} % 定理缩进量 Theorem indent amount
+{\bfseries} % 定理开头字体 Theorem head font
+{.} % 定理开头后所接标点 Punctuation after theorem head
+{ } % 定理开头后所接空间尺寸，空格为默认词间距 Space after theorem head, whitespace means normal interword space
+{第\thmnumber{ #2}\thmname{ #1}\thmnote{ (#3)} 得分: \underline{\qquad\qquad}} % 定理开头格式，留空为默认 Theorem head spec, being left empty means default
+\theoremstyle{Problem} % 设定定理风格 Set theorem style
+\newtheorem{ti}{题} % 题目
+\newtheorem{prob}{Problem} % Problem
+\newtheoremstyle{Solution} % 定理风格名称 Theorem style name
+{} % 定理上方空间尺寸，留空为默认 Space above theorem, being left empty means default
+{} % 定理下方空间尺寸，留空为默认 Space below theorem, being left empty means default
+{} % 定理主体文本字体 Theorem body font
+{} % 定理缩进量 Theorem indent amount
+{\bfseries} % 定理开头字体 Theorem head font
+{:} % 定理开头后所接标点 Punctuation after theorem head
+{ } % 定理开头后所接空间尺寸，空格为默认词间距 % Space after theorem head, whitespace means normal interword space
+{\thmname{#1}} % 定理开头格式 Theorem head spec, being left empty means default
 \makeatletter
-\def\@endtheorem{\qed\endtrivlist\@endpefalse}% 题解后添加qed符号（黑色空心小正方形）
+\def\@endtheorem{\qed\endtrivlist\@endpefalse} % 题解后添加qed符号（黑色空心小正方形） % Add qed symbols (black hollow small square) to the end of solutions
 \makeatother
-\theoremstyle{Solution}% 设定定理风格
+\theoremstyle{Solution} % 设定定理风格 Set theorem style
 \newtheorem*{jie}{解} % 中文风格题解
 \newtheorem*{zheng}{证} % 中文风格证明
-\newtheorem*{sol}{Solution}% 题解
+\newtheorem*{sol}{Solution} % Solution
 
-\lstset{language=[95]Fortran,
-numbers=left,
-frame=single,
-breaklines=true,
-showtabs=true,
-tab=\rightarrowfill}
+% 插入代码风格 Inserting code style
+\lstset{language=[95]Fortran, % 代码语言 Coding language
+numbers=left, % 在左侧添加行号 Add line numbers at left
+frame=single, % 用单线框围绕代码 Enclose code with single-line frame
+breaklines=true, % 自动折行 Wrap automatically
+showspaces=true, % 显示空格 Show spaces
+showtabs=true, % 显示制表符 Show tabs
+tab=\rightarrowfill} % 用右箭头填充制表符 Fill tabs with right arrows
