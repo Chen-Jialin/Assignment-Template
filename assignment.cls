@@ -18,63 +18,54 @@
 
 \pagestyle{fancy}% 全局页眉和页脚风格 Global header and footer style
 \fancyhf{}% 清除预设的页眉和页脚 Clear the default header and foot
-% #1 课程名称 Course name
-% #2 课程代码 Course code
-% #3 学期 Semeter
-% #4 项目名称 Project name
-% #5 日期和/或时间类型 Date and / or time type
-% #6 日期和/或时间 Date and / or time
+% #1 风格：缺省 - 中文风格；星号（*）- 英文风格 Style, default - Chinese style; star sign (*) - English style
+% #2 课程名称 Course name
+% #3 课程代码 Course code
+% #4 学期 Semeter
+% #5 项目标题 Project title
+% #6 项目副标题或补充信息 Project subtitle / supplementary information
 % #7 姓名 Student name
 % #8 学号 Student ID
-\NewDocumentCommand{\ProjectInfos}{ s m m m m m m m m }
+\NewDocumentCommand{\ProjectInfos}{ s m m m m m m m }
 {
     \fancyhead[L]{#2}
     \fancyhead[C]{#3}
     \fancyhead[R]{#4}
     \setlength\headheight{14pt} % 页眉高 The height of the header
-    \IfBooleanTF{#1}
+    \fancypagestyle{FirstPage} % 首页风格 First page style
     {
-        \fancypagestyle{FirstPage} % 首页风格 First page style
+        \fancyhf{}
+        \fancyhead[L]{#2\\
+            #3\\
+            #4}
+        \fancyhead[C]{{\Huge\bfseries#5}\\
+            #6}
+        \setlength\headheight{38pt}
+        \IfBooleanTF{#1}
         {
-            \fancyhf{}
-            \fancyhead[L]{#2\\
-                #3\\
-                #4}
-            \fancyhead[C]{{\Huge\bfseries#4}\\
-                #6 : #7}
-            \fancyhead[R]{姓名 : \makebox[\maxof{\widthof{#8}}{\widthof{#9}}][s]{#8}\\
-                学号 : \makebox[\maxof{\widthof{#8}}{\widthof{#9}}][s]{#9}\\
-                成绩 : \underline{\makebox[\maxof{\widthof{#8}}{\widthof{#9}}][s]{}}}
-            \fancyfoot[R]{\thepage\ / \pageref{LastPage}}
-            \setlength\headheight{38pt}
+            \fancyhead[R]{Name : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#7}\\
+                Student ID : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#8}\\
+                Grade : \underline{\makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{}}}
         }
-    }
-    {
-        \fancypagestyle{FirstPage} % 首页风格 First page style
         {
-            \fancyhf{}
-            \fancyhead[L]{#2\\
-                #3\\
-                #4}
-            \fancyhead[C]{{\Huge\bfseries#4}\\
-                #6 : #7}
-            \fancyhead[R]{Name : \makebox[\maxof{\widthof{#8}}{\widthof{#9}}][s]{#8}\\
-                Student ID : \makebox[\maxof{\widthof{#8}}{\widthof{#9}}][s]{#9}\\
-                Grade : \underline{\makebox[\maxof{\widthof{#8}}{\widthof{#9}}][s]{}}}
-            \fancyfoot[R]{\thepage\ / \pageref{LastPage}}
-            \setlength\headheight{38pt}
+            \fancyhead[R]{姓名 : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#7}\\
+                学号 : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#8}\\
+                成绩 : \underline{\makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{}}}
         }
+        \fancyfoot[R]{\thepage\ / \pageref{LastPage}}
     }
     \thispagestyle{FirstPage}
 }
 \fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右: <当前页码> / <总页数> The right of the footer: <current page number> / <total page number>
 
+% 数学公式 Mathematical equations
 \RequirePackage{amsmath, amssymb, amsthm, bm} % 基础数学支持, 特殊数学符号, 自定义定理, 公式内加粗 Basic math support, special math symbols, theorem custom, bold in equation
+\allowdisplaybreaks[4]% 公式跨页 Cross-page equations
 
 % 图片 Figures
-\RequirePackage{graphicx} % graphics
-\RequirePackage{float} % set the position of figure mandatorily
-\RequirePackage{subfigure} %  Subfigures
+\RequirePackage{graphicx} % 图片 Graphics
+\RequirePackage{float} % 强制设定图片位置 Set the positions of figures mandatorily
+\RequirePackage{subfigure} % figure环境中子图 Subfigures in the figure environment
 
 % 表格 Tables
 \RequirePackage{multirow} % 表内多行单元格合并 Tables with merged multi-row cells
