@@ -1,11 +1,40 @@
-# 作业模板（尚在开发中）  AssignmentTemplate (still developing)
+# 作业模板 Assignment Template
 
-可爱而优雅、功能齐全而稳定的LaTeX模板，适用于各种作业、实验报告、课程项目、课程论文等，支持中英双语、数学公式、图表、化学式、程序代码、文献引用等。
+可爱而优雅、功能齐全而稳定的\LaTeX模板，适用于
+- 作业
+- 实验报告
+- 课程项目
+- 课程论文
 
-Cute and elegant, polyfunctional and robust LaTeX Template, applicable to various scenarios such as assignments, experiment reports, course projects and course essay, bilingual and supporting diverse function such as mathematical formula, figures, tables, chemistry formula, program code, citing references.
+等各种场景，支持
+- 中英双语
+- 数学公式
+- 图表
+- 化学式
+- 程序代码
+- 文献引用
+等功能.
 
-## TODO
+Cute and elegant, polyfunctional and robust LaTeX Template, applicable to various scenarios such as
+- assignments
+- experiment reports
+- course projects
+- course essays
 
-- 中英文支持
-- 应用文献支持
-- tex文件中的各种示例
+It is bilingual and supporting functions including
+- mathematical formulas
+- figures
+- tables
+- chemistry formulas
+- program code
+- citing references
+
+同时支持\pdfLaTeX和\XeLaTeX.
+
+Both \pdfLaTeX and \XeLaTeX work.
+
+## 待做 TODO
+
+暂无.
+
+Null for now.

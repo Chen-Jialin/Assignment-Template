@@ -84,18 +84,30 @@
 \fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右：<当前页码> / <总页数> The right of the footer: <current page number> / <total page number>
 
 % 题目和题解风格 Problem and solution style
-\newtheoremstyle{Problem}% 定理风格名称 Theorem style name
-{} % 定理上方空间尺寸，留空为默认 Space above theorem, being left empty means default
-{} % 定理下方空间尺寸，留空为默认 Space below theorem, being left empty means default
-{} % 定理主体字体 Theorem body font
-{} % 定理缩进量 Theorem indent amount
-{\bfseries} % 定理开头字体 Theorem head font
-{.} % 定理开头后所接标点 Punctuation after theorem head
-{ } % 定理开头后所接空间尺寸，空格为默认词间距 Space after theorem head, whitespace means normal interword space
-{第\thmnumber{ #2}\thmname{ #1}\thmnote{ (#3)} 得分: \underline{\qquad\qquad}} % 定理开头格式，留空为默认 Theorem head spec, being left empty means default
-\theoremstyle{Problem} % 设定定理风格 Set theorem style
+\newtheoremstyle{Ti} % 定理风格名称
+{} % 定理上方空间尺寸，留空为默认
+{} % 定理下方空间尺寸，留空为默认
+{} % 定理主体字体
+{} % 定理缩进量
+{\bfseries} % 定理开头字体
+{.} % 定理开头后所接标点
+{ } % 定理开头后所接空间尺寸，空格为默认词间距
+{第\thmnumber{ #2}\thmname{ #1}\thmnote{ (#3)} 得分: \underline{\qquad\qquad}} % 定理开头格式，留空为默认
+\theoremstyle{Ti} % 设定定理风格
 \newtheorem{ti}{题} % 题目
+
+\newtheoremstyle{Problem} % Theorem style name
+{} % Space above theorem, being left empty means default
+{} % Space below theorem, being left empty means default
+{} % Theorem body font
+{} % Theorem indent amount
+{\bfseries} % Theorem head font
+{.} % Punctuation after theorem head
+{ } % Space after theorem head, whitespace means normal interword space
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)} Score: \underline{\qquad\qquad}} % Theorem head spec, being left empty means default
+\theoremstyle{Problem} % Set theorem style
 \newtheorem{prob}{Problem} % Problem
+
 \newtheoremstyle{Solution} % 定理风格名称 Theorem style name
 {} % 定理上方空间尺寸，留空为默认 Space above theorem, being left empty means default
 {} % 定理下方空间尺寸，留空为默认 Space below theorem, being left empty means default
@@ -121,3 +133,5 @@ breaklines=true, % 自动折行 Wrap automatically
 showspaces=true, % 显示空格 Show spaces
 showtabs=true, % 显示制表符 Show tabs
 tab=\rightarrowfill} % 用右箭头填充制表符 Fill tabs with right arrows
+
+\newcommand{\UsingEnglish}{\ctexset{today={old},contentsname={Content}, listfigurename={Figure List}, listtablename={Table List}, figurename={Figure}, tablename={Table}, abstractname={Abstract}, indexname={Index}, appendixname={Appendix}, bibname={References}, proofname={Proof}}} % 阻止ctex宏包过度汉化 Suppress excessive chinesization by ctex package
