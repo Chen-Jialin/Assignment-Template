@@ -39,6 +39,12 @@ Both \pdfLaTeX and \XeLaTeX work.
 
 ![English example](Examples/AssignmentExample-En.jpg)
 
+## 注意 Note
+
+文件夹`作业模板(中文版)`和`AssignmentTemplate(En-ver)`是已不再维护的旧版本.
+
+In folder `作业模板(中文版)` and `AssignmentTemplate(En-ver)` are the old version which are not maintained anymore.
+
 ## 待做 TODO
 
 暂无.
