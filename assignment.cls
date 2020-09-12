@@ -39,7 +39,7 @@
 % 其他 Others
 \RequirePackage{ulem} % 各式下划线和删除标记 Various underlines & deletion notes
 
-\newcommand{\UsingEnglish}{\ctexset{today={old},contentsname={Content}, listfigurename={Figure List}, listtablename={Table List}, figurename={Figure}, tablename={Table}, abstractname={Abstract}, indexname={Index}, appendixname={Appendix}, bibname={References}, proofname={Proof}}} % 阻止ctex宏包过度汉化 Suppress excessive chinesization by ctex package
+\providecommand{\UsingEnglish}{\ctexset{today={old},contentsname={Content}, listfigurename={Figure List}, listtablename={Table List}, figurename={Figure}, tablename={Table}, abstractname={Abstract}, indexname={Index}, appendixname={Appendix}, bibname={References}, proofname={Proof}}} % 阻止ctex宏包过度汉化 Suppress excessive chinesization by ctex package
 
 % 页眉和页脚 Header & footer
 \pagestyle{fancy} % 全局页眉和页脚风格 Global header and footer style
@@ -87,6 +87,7 @@
 \allowdisplaybreaks[4] % 公式跨页 Cross-page equations
 \providecommand{\abs}[1]{\left\lvert#1\right\rvert} % 绝对值 Absolute
 \providecommand{\norm}[1]{\left\lVert#1\right\rVert} % 范数 Norm
+\providecommand{\sinc}{\,\text{sinc}\,} % 辛格函数 sinc function
 \providecommand{\bra}[1]{\left\langle#1\right\rvert} % 左矢 Bra
 \providecommand{\ket}[1]{\left\lvert#1\right\rangle} % 右矢 Ket
 \providecommand{\braket}[2]{\left\langle#1\left\vert\right.#2\right\rangle} % 右矢接左矢 Contiguous ket after bra
