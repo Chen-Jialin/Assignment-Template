@@ -1,12 +1,10 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{assignment}[2020/09/08 Class for assignments]
 
-% Load class
-
+%% Load class
 \LoadClass[a4paper, 10pt]{article} % Load article class with A4 paper and 10pt font
 
-% Call packages
-
+%% Call packages
 \RequirePackage[UTF8]{ctex} % 中文支持 Chinese support
 
 \RequirePackage[vmargin=1in,hmargin=.5in]{geometry} % 页边距 Page margin
@@ -19,7 +17,8 @@
 
 % 数学公式 Mathematical equations
 \RequirePackage{amsmath, amssymb, amsthm, bm} % 基础数学支持, 特殊数学符号, 自定义定理, 公式内加粗 Basic math support, special math symbols, theorem custom, bold in equation
-\allowdisplaybreaks[4] % 公式跨页 Cross-page equations
+\usepackage{mathrsfs}% non-CM calligraphic letters in equation - \mathscr{}
+\usepackage{esint}% special integral signs
 
 % 图片 Figures
 \RequirePackage{graphicx} % 图片 Graphics
@@ -39,6 +38,8 @@
 
 % 其他 Others
 \RequirePackage{ulem} % 各式下划线和删除标记 Various underlines & deletion notes
+
+\newcommand{\UsingEnglish}{\ctexset{today={old},contentsname={Content}, listfigurename={Figure List}, listtablename={Table List}, figurename={Figure}, tablename={Table}, abstractname={Abstract}, indexname={Index}, appendixname={Appendix}, bibname={References}, proofname={Proof}}} % 阻止ctex宏包过度汉化 Suppress excessive chinesization by ctex package
 
 % 页眉和页脚 Header & footer
 \pagestyle{fancy} % 全局页眉和页脚风格 Global header and footer style
@@ -83,6 +84,13 @@
 }
 \fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右：<当前页码> / <总页数> The right of the footer: <current page number> / <total page number>
 
+\allowdisplaybreaks[4] % 公式跨页 Cross-page equations
+\providecommand{\abs}[1]{\left\lvert#1\right\rvert} % 绝对值 Absolute
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert} % 范数 Norm
+\providecommand{\bra}[1]{\left\langle#1\right\rvert} % 左矢 Bra
+\providecommand{\ket}[1]{\left\lvert#1\right\rangle} % 右矢 Ket
+\providecommand{\braket}[2]{\left\langle#1\left\vert\right.#2\right\rangle} % 右矢接左矢 Contiguous ket after bra
+
 % 题目和题解风格 Problem and solution style
 \newtheoremstyle{Ti} % 定理风格名称
 {} % 定理上方空间尺寸，留空为默认
@@ -124,6 +132,7 @@
 \newtheorem*{jie}{解} % 中文风格题解
 \newtheorem*{zheng}{证} % 中文风格证明
 \newtheorem*{sol}{Solution} % Solution
+\newtheorem*{pf}{Proof} % Proof
 
 % 插入代码风格 Inserting code style
 \lstset{language=[95]Fortran, % 代码语言 Coding language
@@ -133,5 +142,3 @@ breaklines=true, % 自动折行 Wrap automatically
 showspaces=true, % 显示空格 Show spaces
 showtabs=true, % 显示制表符 Show tabs
 tab=\rightarrowfill} % 用右箭头填充制表符 Fill tabs with right arrows
-
-\newcommand{\UsingEnglish}{\ctexset{today={old},contentsname={Content}, listfigurename={Figure List}, listtablename={Table List}, figurename={Figure}, tablename={Table}, abstractname={Abstract}, indexname={Index}, appendixname={Appendix}, bibname={References}, proofname={Proof}}} % 阻止ctex宏包过度汉化 Suppress excessive chinesization by ctex package
