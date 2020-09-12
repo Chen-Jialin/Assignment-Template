@@ -87,6 +87,7 @@
 \allowdisplaybreaks[4] % 公式跨页 Cross-page equations
 \providecommand{\abs}[1]{\left\lvert#1\right\rvert} % 绝对值 Absolute
 \providecommand{\norm}[1]{\left\lVert#1\right\rVert} % 范数 Norm
+\providecommand{\sgn}{\,\text{sgn}\,} % 符号函数 Sign function
 \providecommand{\sinc}{\,\text{sinc}\,} % 辛格函数 sinc function
 \providecommand{\bra}[1]{\left\langle#1\right\rvert} % 左矢 Bra
 \providecommand{\ket}[1]{\left\lvert#1\right\rangle} % 右矢 Ket
