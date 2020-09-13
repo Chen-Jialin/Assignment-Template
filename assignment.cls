@@ -140,8 +140,7 @@
 \newtheorem*{pf}{Proof} % Proof
 
 % 插入代码风格 Inserting code style
-\lstset{language=[95]Fortran, % 代码语言 Coding language
-numbers=left, % 在左侧添加行号 Add line numbers at left
+\lstset{numbers=left, % 在左侧添加行号 Add line numbers at left
 frame=single, % 用单线框围绕代码 Enclose code with single-line frame
 breaklines=true, % 自动折行 Wrap automatically
 showspaces=true, % 显示空格 Show spaces
