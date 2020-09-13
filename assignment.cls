@@ -38,6 +38,7 @@
 
 % 其他 Others
 \RequirePackage{ulem} % 各式下划线和删除标记 Various underlines & deletion notes
+\RequirePackage{hyperref} % 超链接 Hyperlink
 
 \providecommand{\UsingEnglish}{\ctexset{today={old},contentsname={Content}, listfigurename={Figure List}, listtablename={Table List}, figurename={Figure}, tablename={Table}, abstractname={Abstract}, indexname={Index}, appendixname={Appendix}, bibname={References}, proofname={Proof}}} % 阻止ctex宏包过度汉化 Suppress excessive chinesization by ctex package
 
