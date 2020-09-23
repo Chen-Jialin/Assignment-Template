@@ -17,8 +17,8 @@
 
 % 数学公式 Mathematical equations
 \RequirePackage{amsmath, amssymb, amsthm, bm} % 基础数学支持, 特殊数学符号, 自定义定理, 公式内加粗 Basic math support, special math symbols, theorem custom, bold in equation
-\usepackage{mathrsfs}% 公式内花体字母 Non-CM calligraphic letters in equations
-\usepackage{esint}% 特殊积分号 Special integral signs
+\usepackage{mathrsfs} % 公式内花体字母 Non-CM calligraphic letters in equations
+\usepackage{esint} % 特殊积分号 Special integral signs
 
 % 图片 Figures
 \RequirePackage{graphicx} % 图片 Graphics
