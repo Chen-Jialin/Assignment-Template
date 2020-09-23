@@ -69,12 +69,12 @@
             #6} % 页眉中 Center of the header
         \setlength\headheight{38pt} % 页眉高 Height of the header
         \IfBooleanTF{#1}
-        { % Star note (*) - English-style first-page header
+        { % Star note (*) - English-style right of the first-page header
             \fancyhead[R]{Name : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#7}\\
                 Student ID : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#8}\\
                 Grade : \underline{\makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{}}} % Right of the header
         }
-        { % 无星号（*）- 中文风格首页页眉
+        { % 无星号（*）- 中文风格首页页眉右
             \fancyhead[R]{姓名 : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#7}\\
                 学号 : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#8}\\
                 成绩 : \underline{\makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{}}} % 页眉右
@@ -134,8 +134,8 @@
 \def\@endtheorem{\qed\endtrivlist\@endpefalse} % 题解后添加qed符号（黑色空心小正方形） % Add qed symbols (black hollow small square) to the end of solutions
 \makeatother
 \theoremstyle{Solution} % 设定定理风格 Set theorem style
-\newtheorem*{jie}{解} % 中文风格题解
-\newtheorem*{zheng}{证} % 中文风格证明
+\newtheorem*{jie}{解} % 题解
+\newtheorem*{zheng}{证} % 证明
 \newtheorem*{sol}{Solution} % Solution
 \newtheorem*{pf}{Proof} % Proof
 
