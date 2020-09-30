@@ -95,7 +95,7 @@
 \providecommand{\sinc}{\,\text{sinc}\,} % 辛格函数 sinc function
 \providecommand{\bra}[1]{\left\langle#1\right\rvert} % 左矢 Bra
 \providecommand{\ket}[1]{\left\lvert#1\right\rangle} % 右矢 Ket
-\providecommand{\braket}[2]{\left\langle#1\left\vert\right.#2\right\rangle} % 右矢接左矢 Contiguous ket after bra
+\providecommand{\tr}{\,\text{Tr}\,} % 矩阵的迹 Trace of matrix
 
 % 题目和题解风格 Problem and solution style
 \newtheoremstyle{Ti} % 定理风格名称
