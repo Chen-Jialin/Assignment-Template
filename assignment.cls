@@ -29,6 +29,7 @@
 \RequirePackage{multirow} % 表内多行单元格合并 Tables with merged multi-row cells
 \RequirePackage{booktabs} % 三线表 Three-line tables
 \RequirePackage{longtable} % 表格跨页 Cross-page tables
+\RequirePackage{lscape} % 横排表格 Landscape table
 
 % 化学式 Chemstry formulas
 \RequirePackage[version=4]{mhchem} % 基础化学式 Basic chemistry equations
