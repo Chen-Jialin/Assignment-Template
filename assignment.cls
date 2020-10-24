@@ -81,11 +81,11 @@
                 学号 : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#8}\\
                 成绩 : \underline{\makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{}}} % 页眉右
         }
-        \fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右：<当前页码> / <总页数>
+        \fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右：<当前页码> / <总页数> Right of the footer: <current page number> / <total page number>
     }
     \thispagestyle{FirstPage} % 设置首页页眉风格为FirstPage Set header style of first page to be FirstPage
 }
-\fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右：<当前页码> / <总页数> The right of the footer: <current page number> / <total page number>
+\fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右：<当前页码> / <总页数> Right of the footer: <current page number> / <total page number>
 
 \allowdisplaybreaks[4] % 公式跨页 Cross-page equations
 \providecommand{\abs}[1]{\left\lvert#1\right\rvert} % 绝对值 Absolute
