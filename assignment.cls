@@ -90,6 +90,9 @@
 \allowdisplaybreaks[4] % 公式跨页 Cross-page equations
 \providecommand{\abs}[1]{\left\lvert#1\right\rvert} % 绝对值 Absolute
 \providecommand{\norm}[1]{\left\lVert#1\right\rVert} % 范数 Norm
+\providecommand{\arcsinh}{\,\text{arcsinh}\,} % 反双曲正弦 Inverse hyperbolic sine
+\providecommand{\arccosh}{\,\text{arccosh}\,} % 反双曲余弦 Inverse hyperbolic cosine
+\providecommand{\arctanh}{\,\text{arctanh}\,} % 反双曲正切 Inverse hyperbolic tangent
 \providecommand{\re}{\,\text{Re}\,} % 复数的实部 Real part of complex number
 \providecommand{\im}{\,\text{Im}\,} % 复数的虚部 Imaginary part of complex number
 \providecommand{\sgn}{\,\text{sgn}\,} % 符号函数 Sign function
