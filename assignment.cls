@@ -16,7 +16,7 @@
 \RequirePackage{calc} % 返回文本宽度 Return the width of the text
 
 % 数学公式 Mathematical equations
-\RequirePackage{amsmath, amssymb, amsthm, bm} % 基础数学支持, 特殊数学符号, 自定义定理, 公式内加粗 Basic math support, special math symbols, theorem custom, bold in equation
+\RequirePackage{amsmath, amssymb, amsthm, bm} % 基础数学支持, 特殊数学符号, 自定义定理, 公式内加粗 Basic math support, special math symbols, theorem custom, bold in equations
 \usepackage{mathrsfs} % 公式内花体字母 Non-CM calligraphic letters in equations
 \usepackage{esint} % 特殊积分号 Special integral signs
 
@@ -30,6 +30,7 @@
 \RequirePackage{booktabs} % 三线表 Three-line tables
 \RequirePackage{longtable} % 表格跨页 Cross-page tables
 \RequirePackage{lscape} % 横排表格 Landscape tables
+\RequirePackage{diagbox} % 对角线分割单元格 Cells saperated by diagonal lines
 
 % 化学式 Chemstry formulas
 \RequirePackage[version=4]{mhchem} % 基础化学式 Basic chemistry equations
@@ -38,7 +39,7 @@
 \RequirePackage{listings} % 程序代码 Program code
 
 % 其他 Others
-\RequirePackage{ulem} % 各式下划线和删除标记 Various underlines & deletion notes
+\RequirePackage[normalem]{ulem} % 各式下划线和删除标记, 避免将意大利斜体(\emph或\em)替换为下划线 Various underlines & deletion notes, avoiding replacing italics (\emph or \em) with underlines
 \usepackage{color} % 文本颜色 Text color
 \RequirePackage{hyperref} % 超链接 Hyperlink
 
@@ -96,10 +97,19 @@
 \providecommand{\re}{\,\text{Re}\,} % 复数的实部 Real part of complex number
 \providecommand{\im}{\,\text{Im}\,} % 复数的虚部 Imaginary part of complex number
 \providecommand{\sgn}{\,\text{sgn}\,} % 符号函数 Sign function
-\providecommand{\sinc}{\,\text{sinc}\,} % 辛格函数 sinc function
+\providecommand{\sinc}{\,\text{sinc}\,} % 辛格函数 Sinc function
+\providecommand{\rect}{\,\text{rect}\,} % 矩形函数 Rectangular function
 \providecommand{\bra}[1]{\left\langle#1\right\rvert} % 左矢 Bra
 \providecommand{\ket}[1]{\left\lvert#1\right\rangle} % 右矢 Ket
 \providecommand{\tr}{\,\text{Tr}\,} % 矩阵的迹 Trace of matrix
+
+\providecommand{\muline}[1]{\text{\uline{$#1$}}} 公式内下划线 Underlines in equations
+\providecommand{\muuline}[1]{\text{\uuline{$#1$}}} 公式内双下划线 Double underlines in equations
+\providecommand{\muwave}[1]{\text{\wave{$#1$}}} 公式内波浪下划线 Wavy underlines in equations
+\providecommand{\msout}[1]{\text{\sout{$#1$}}} 公式内删除线 Strickout in equations
+\providecommand{\mxout}[1]{\text{\xout{$#1$}}} 公式内删除标记(多条斜线) Deletion notes (multiple slash) in equations
+\providecommand{\mdashuline}[1]{\text{dashuline{$#1$}}} 公式内虚下划线 Dashed underlines in equations
+\providecommand{\mdotuline}[1]{\text{\dotuline{$#1$}}} 公式内点状虚下划线 Dotted underlines in equations
 
 % 题目和题解风格 Problem and solution style
 \newtheoremstyle{Ti} % 定理风格名称
@@ -136,7 +146,7 @@
 { } % 定理开头后所接空间尺寸，空格为默认词间距 % Space after theorem head, whitespace means normal interword space
 {\thmname{#1}} % 定理开头格式 Theorem head spec, being left empty means default
 \makeatletter
-\def\@endtheorem{\qed\endtrivlist\@endpefalse} % 题解后添加qed符号（黑色空心小正方形） % Add qed symbols (black hollow small square) to the end of solutions
+\def\@endtheorem{\qed\endtrivlist\@endpefalse} % 题解后添加qed符号(黑色空心小正方形) % Add qed symbols (black hollow small square) to the end of solutions
 \makeatother
 \theoremstyle{Solution} % 设定定理风格 Set theorem style
 \newtheorem*{jie}{解} % 题解
