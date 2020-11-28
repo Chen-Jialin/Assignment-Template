@@ -103,13 +103,13 @@
 \providecommand{\ket}[1]{\left\lvert#1\right\rangle} % 右矢 Ket
 \providecommand{\tr}{\,\text{Tr}\,} % 矩阵的迹 Trace of matrix
 
-\providecommand{\muline}[1]{\text{\uline{$#1$}}} 公式内下划线 Underlines in equations
-\providecommand{\muuline}[1]{\text{\uuline{$#1$}}} 公式内双下划线 Double underlines in equations
-\providecommand{\muwave}[1]{\text{\wave{$#1$}}} 公式内波浪下划线 Wavy underlines in equations
-\providecommand{\msout}[1]{\text{\sout{$#1$}}} 公式内删除线 Strickout in equations
-\providecommand{\mxout}[1]{\text{\xout{$#1$}}} 公式内删除标记(多条斜线) Deletion notes (multiple slash) in equations
-\providecommand{\mdashuline}[1]{\text{dashuline{$#1$}}} 公式内虚下划线 Dashed underlines in equations
-\providecommand{\mdotuline}[1]{\text{\dotuline{$#1$}}} 公式内点状虚下划线 Dotted underlines in equations
+\providecommand{\muline}[1]{\text{\uline{$#1$}}} % 公式内下划线 Underlines in equations
+\providecommand{\muuline}[1]{\text{\uuline{$#1$}}} % 公式内双下划线 Double underlines in equations
+\providecommand{\muwave}[1]{\text{\wave{$#1$}}} % 公式内波浪下划线 Wavy underlines in equations
+\providecommand{\msout}[1]{\text{\sout{$#1$}}} % 公式内删除线 Strickout in equations
+\providecommand{\mxout}[1]{\text{\xout{$#1$}}} % 公式内删除标记(多条斜线) Deletion notes (multiple slash) in equations
+\providecommand{\mdashuline}[1]{\text{dashuline{$#1$}}} % 公式内虚下划线 Dashed underlines in equations
+\providecommand{\mdotuline}[1]{\text{\dotuline{$#1$}}} % 公式内点状虚下划线 Dotted underlines in equations
 
 % 题目和题解风格 Problem and solution style
 \newtheoremstyle{Ti} % 定理风格名称
