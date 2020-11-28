@@ -1,16 +1,16 @@
 % !TEX program = pdflatex -> bibtex -> pdflatex*2
-\documentclass{assignment}
+\documentclass[zh]{assignment}
 \ProjectInfos{量子力学}{PHYS1501}{2020-2021学年第一学期}{第一次作业}{截止时间：2020. 09. 08（周二）}{陈润植}{45875852}
 
 \begin{document}
-    \begin{ti}
+    \begin{prob}
         请证明本\LaTeX模板支持以下功能：
         \begin{itemize}
             \item[(1)] 数学公式；
             \item[(2)] 化学反应方程式.
         \end{itemize}
-    \end{ti}
-    \begin{zheng}
+    \end{prob}
+    \begin{pf}
         \begin{itemize}
             \item[(1)] 三维空间中，位于位势$V(\bm{r},t)$中的单粒子薛定谔方程为
             \begin{equation}
@@ -22,11 +22,11 @@
                 \ce{\chemfig{*6([,.5]-=-=-=)} + \chemfig{[,.75]HO-NO_2} ->[\mbox{浓硫酸}][$\Delta$] \chemfig{*6([,.5]-=-(-NO_2)=-=)} + H2O}
             \end{equation}
         \end{itemize}
-    \end{zheng}
+    \end{pf}
 
     \clearpage
 
-    \begin{ti}
+    \begin{prob}
         请完成以下操作：
         \begin{itemize}
             \item[(1)] 插入图片；
@@ -43,8 +43,8 @@
             \item[(3)] 插入代码；
             \item[(4)] 引用文献.
         \end{itemize}
-    \end{ti}
-    \begin{jie}
+    \end{prob}
+    \begin{sol}
         \begin{itemize}
             \item[(1)]
             \begin{itemize}
@@ -98,7 +98,7 @@ end program main
 \end{lstlisting}
             \item[(4)] 鲁迅先生说过\cite{luxun2006}：“贪安稳就没有自由，要自由就要历些危险，只有这两条路。”
         \end{itemize}
-    \end{jie}
+    \end{sol}
 
     \bibliographystyle{unsrt}
     \bibliography{Assignment-zh}
