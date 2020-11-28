@@ -75,15 +75,15 @@
     \fancypagestyle{FirstPage} % 首页页眉 First-page header
     {
         \fancyhf{} % 清除预设的页眉和页脚 Clear default header and footer
+        \setlength{\headheight}{38pt} % 页眉高 Height of the header
         \fancyhead[L]{#1\\
             #2\\
-            #3} % 页眉左 Left of the header
+            #3} % 页眉左 The left of the header
         \fancyhead[C]{{\Huge\bfseries#4}\\
             #5} % 页眉中 Center of the header
-        \setlength{\headheight}{38pt} % 页眉高 Height of the header
             \fancyhead[R]{\Name{} : \makebox[\maxof{\widthof{#6}}{\widthof{#7}}][s]{#6}\\
                 \StudentID{} : \makebox[\maxof{\widthof{#6}}{\widthof{#7}}][s]{#7}\\
-                \Grade{} : \underline{\makebox[\maxof{\widthof{#6}}{\widthof{#7}}][s]{}}} % 页眉右 Right of the header
+                \Grade{} : \underline{\makebox[\maxof{\widthof{#6}}{\widthof{#7}}][s]{}}} % 页眉右 The right of the header
         \fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右：<当前页码> / <总页数> Right of the footer: <current page number> / <total page number>
     }
     \thispagestyle{FirstPage} % 设置首页页眉风格为FirstPage Set header style of first page to be FirstPage
@@ -158,7 +158,7 @@
 
 % 插入代码风格 Inserting code style
 \lstset{numbers=left, % 在左侧添加行号 Add line numbers at left
-frame=single, % 用单线框围绕代码 Enclose code with single-line frame
+frame=single, % 用单线框围绕代码 Enclose code with single-line frames
 breaklines=true, % 自动折行 Wrap automatically
 showspaces=true, % 显示空格 Show spaces
 showtabs=true, % 显示制表符 Show tabs
