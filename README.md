@@ -41,7 +41,7 @@ Customized environments of problems, solutions and proofs; customized operators 
 
 #### 中文版：
 0. 将类文件`assignment.cls` 与 `*.tex`文件置于同一路径下；
-1. `*.tex`文件开头用`\documentclass[zh]{assignment}`调用本作业模板类；
+1. `*.tex`文件开头用`\documentclass{assignment}`调用本作业模板类；
 2. 导言区用`\ProjectInfos{<课程名称>}{<课程代码>}{<学期>}{<项目名称>}{<项目副标题或补充信息>}{<姓名>}[<姓名上的超链接>]{<学号>}`设置页眉、页脚；
 3. 分别用`\begin{prob}...\end{prob}`、`\begin{sol}...\end{sol}` 和 `\begin{pf}...\end{pf}`调用题目、题解、证明环境；
 4. 已添加支持数学公式、图表、化学式、程序代码、文献引用等的宏包，仿照示例文件`Assignment-zh*`使用即可；
