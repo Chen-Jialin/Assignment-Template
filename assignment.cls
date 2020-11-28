@@ -1,10 +1,18 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{assignment}[2020/09/08 Class for assignments]
 
+% Options
+\providecommand{\Side}{oneside}
+\newif\ifTwoSide
+\DeclareOption{twoside}{
+    \renewcommand{\Side}{twoside}
+    \TwoSidetrue
+}
+
 %% Load class
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
-\LoadClass[a4paper, 10pt]{article} % Load article class with A4 paper and 10pt font
+\LoadClass[a4paper, \Side, 10pt]{article} % Load article class with A4 paper, two-side style and 10pt font
 
 %% Call packages
 % 数学公式 Mathematical equations
@@ -14,7 +22,8 @@
 
 % 语言 Language
 % 题目和题解风格 Problem and solution style
-\DeclareOption{zh}{ % 使用中文
+\DeclareOption{zh} % 使用中文
+{
     \providecommand{\Name}{姓名} % 页眉右“姓名”
     \providecommand{\StudentID}{学号} % 页眉右“学号”
     \providecommand{\Grade}{成绩} % 页眉右“成绩”
@@ -32,7 +41,8 @@
     \providecommand{\Solution}{解} % 题解环境(sol)中的“解”
     \providecommand{\Proof}{证} % 证明环境(pf)中的“证”
 }
-\DeclareOption{en}{ % Using English
+\DeclareOption{en} % Using English
+{
     \PassOptionsToPackage{scheme=plain}{ctex} % 阻止ctex宏包过度汉化 Suppress excessive chinesization by ctex package
     \providecommand{\Name}{Name} % "Name" at the right of the header
     \providecommand{\StudentID}{Student ID} % "Student ID" at the right of the header
@@ -111,8 +121,9 @@
 % #4 项目标题 Project title
 % #5 项目副标题或补充信息 Project subtitle / supplementary information
 % #6 姓名 Student name
+% #7 姓名上的超链接 Hyperlink on student name
 % #7 学号 Student ID
-\NewDocumentCommand{\ProjectInfos}{ m m m m m m m }
+\NewDocumentCommand{\ProjectInfos}{ m m m m m m O{https://github.com/Chen-Jialin} m }
 {
     \fancyhead[L]{#1} % 页眉左 The left of the header
     \fancyhead[C]{#4} % 页眉中 The center of the header
@@ -127,14 +138,23 @@
             #3} % 页眉左 The left of the header
         \fancyhead[C]{{\Huge\bfseries#4}\\
             #5} % 页眉中 The center of the header
-            \fancyhead[R]{\Name{} : \makebox[\maxof{\widthof{#6}}{\widthof{#7}}][s]{#6}\\
-                \StudentID{} : \makebox[\maxof{\widthof{#6}}{\widthof{#7}}][s]{#7}\\
-                \Grade{} : \underline{\makebox[\maxof{\widthof{#6}}{\widthof{#7}}][s]{}}} % 页眉右 The right of the header
+            \fancyhead[R]{\Name{} : \makebox[\maxof{\widthof{#6}}{\widthof{#8}}][s]{\href{#7}{#6}}\\
+                \StudentID{} : \makebox[\maxof{\widthof{#6}}{\widthof{#8}}][s]{#8}\\
+                \Grade{} : \underline{\makebox[\maxof{\widthof{#6}}{\widthof{#8}}][s]{}}} % 页眉右 The right of the header
         \fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右: <当前页码> / <总页数> The right of the footer: <current page number> / <total page number>
     }
     \thispagestyle{FirstPage} % 设置首页页眉风格为FirstPage Set header style of the first page as FirstPage
 }
-\fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右: <当前页码> / <总页数> The right of the footer: <current page number> / <total page number>
+\ifTwoSide
+{
+    \fancyfoot[RO]{\thepage\ / \pageref{LastPage}} % 奇数页脚右: <当前页码> / <总页数> The right of odd page footer: <current page number> / <total page number>
+    \fancyfoot[LE]{\thepage\ / \pageref{LastPage}} % 偶数页脚左: <当前页码> / <总页数> The right of even page footer: <current page number> / <total page number>
+}
+\else
+{
+    \fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右: <当前页码> / <总页数> The right of the footer: <current page number> / <total page number>
+}
+\fi
 
 \allowdisplaybreaks[4] % 公式跨页 Cross-page equations
 \providecommand{\abs}[1]{\left\lvert#1\right\rvert} % 绝对值 Absolute
@@ -160,7 +180,8 @@
 \providecommand{\mdotuline}[1]{\text{\dotuline{$#1$}}} % 公式内点状虚下划线 Dotted underlines in equations
 
 % 插入代码风格 Inserting code style
-\lstset{
+\lstset
+{
     numbers=left, % 在左侧添加行号 Add line numbers at left
     frame=single, % 用单线框围绕代码 Enclose code with single-line frames
     breaklines=true, % 自动折行 Wrap automatically
