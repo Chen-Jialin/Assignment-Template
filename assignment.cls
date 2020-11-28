@@ -25,7 +25,6 @@
 % 题目和题解风格 Problem and solution style
 \DeclareOption{zh} % 使用中文
 {
-    
     \providecommand{\Name}{姓名} % 页眉右“姓名”
     \providecommand{\StudentID}{学号} % 页眉右“学号”
     \providecommand{\Grade}{成绩} % 页眉右“成绩”
