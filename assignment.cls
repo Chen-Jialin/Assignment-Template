@@ -40,7 +40,7 @@
 
 % 其他 Others
 \RequirePackage[normalem]{ulem} % 各式下划线和删除标记, 避免将意大利斜体(\emph或\em)替换为下划线 Various underlines & deletion notes, avoiding replacing italics (\emph or \em) with underlines
-\usepackage{color} % 文本颜色 Text color
+\RequirePackage{color} % 文本颜色 Text color
 \RequirePackage{hyperref} % 超链接 Hyperlink
 
 \providecommand{\UsingEnglish}{\ctexset{today={old},contentsname={Content}, listfigurename={Figure List}, listtablename={Table List}, figurename={Figure}, tablename={Table}, abstractname={Abstract}, indexname={Index}, appendixname={Appendix}, bibname={References}, proofname={Proof}}} % 阻止ctex宏包过度汉化 Suppress excessive chinesization by ctex package
