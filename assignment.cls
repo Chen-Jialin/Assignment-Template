@@ -11,14 +11,14 @@
 
 % 自定义页眉和页脚 Header and footer customization
 \RequirePackage{fancyhdr} % 页眉和页脚 Header & footer
-\usepackage{xparse} % 多可选参数的自定义命令 Newcommand with multiple optional arguements
+\RequirePackage{xparse} % 多可选参数的自定义命令 Newcommand with multiple optional arguements
 \RequirePackage{lastpage} % 返回末页页码 Return the page number of the last page
 \RequirePackage{calc} % 返回文本宽度 Return the width of the text
 
 % 数学公式 Mathematical equations
 \RequirePackage{amsmath, amssymb, amsthm, bm} % 基础数学支持, 特殊数学符号, 自定义定理, 公式内加粗 Basic math support, special math symbols, theorem custom, bold in equations
-\usepackage{mathrsfs} % 公式内花体字母 Non-CM calligraphic letters in equations
-\usepackage{esint} % 特殊积分号 Special integral signs
+\RequirePackage{mathrsfs} % 公式内花体字母 Non-CM calligraphic letters in equations
+\RequirePackage{esint} % 特殊积分号 Special integral signs
 
 % 图片 Figures
 \RequirePackage{graphicx} % 图片 Graphics
@@ -39,7 +39,8 @@
 \RequirePackage{listings} % 程序代码 Program code
 
 % 其他 Others
-\RequirePackage[normalem]{ulem} % 各式下划线和删除标记, 避免将意大利斜体(\emph或\em)替换为下划线 Various underlines & deletion notes, avoiding replacing italics (\emph or \em) with underlines
+\RequirePackage{ulem} % 各式下划线和删除标记 Various underlines & deletion notes
+\normalem % 避免将意大利斜体(\emph或\em)替换为下划线 Avoiding replacing italics (\emph or \em) with underlines
 \RequirePackage{color} % 文本颜色 Text color
 \RequirePackage{hyperref} % 超链接 Hyperlink
 
