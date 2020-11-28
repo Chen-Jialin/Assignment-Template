@@ -2,21 +2,22 @@
 \ProvidesClass{assignment}[2020/09/08 Class for assignments]
 
 % Options
-\providecommand{\Side}{oneside}
-\newif\ifTwoSide
-\DeclareOption{twoside}{
+\providecommand{\Side}{oneside} % 单边(不分奇偶数页，默认)或双边(区分奇偶数页)模式 oneside (not distinguishing odd or even pages, default) or twoside (distinguishing odd and even pages) mode
+\newif\ifTwoSide % [布尔变量] 是否为双边模式 [Bool] whether twoside mode or not
+\DeclareOption{twoside}{ % 双边模式 twoside mode
     \renewcommand{\Side}{twoside}
     \TwoSidetrue
 }
+\newif\ifUsingEnglish % [布尔变量] 是否使用英语 [Bool] whether using English
 
 %% Load class
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
-\LoadClass[a4paper, \Side, 10pt]{article} % Load article class with A4 paper, two-side style and 10pt font
+\LoadClass[a4paper, \Side, 10pt]{article} % 加载纸张大小为 A4, \Side 模式, 字号为 10 号的 article 类 Load article class with A4 paper, \Side style and 10pt font
 
 %% Call packages
 % 数学公式 Mathematical equations
-\RequirePackage{amsmath, amssymb, amsthm, bm} % 基础数学支持, 特殊数学符号, 自定义定理, 公式内加粗 Basic math support, special math symbols, theorem custom, bold in equations
+\RequirePackage{amsmath, amssymb, amsthm, bm} % 基础数学支持, 特殊数学符号, 自定义定理, 公式内加粗 Basic math support, special math symbols, theorem customization, bold in equations
 \RequirePackage{mathrsfs} % 公式内花体字母 Non-CM calligraphic letters in equations
 \RequirePackage{esint} % 特殊积分号 Special integral signs
 
@@ -24,6 +25,7 @@
 % 题目和题解风格 Problem and solution style
 \DeclareOption{zh} % 使用中文
 {
+    
     \providecommand{\Name}{姓名} % 页眉右“姓名”
     \providecommand{\StudentID}{学号} % 页眉右“学号”
     \providecommand{\Grade}{成绩} % 页眉右“成绩”
@@ -38,12 +40,13 @@
     {第\thmnumber{ #2}\thmname{ #1}\thmnote{ (#3)} 得分: \underline{\qquad\qquad}} % 定理开头格式, 留空为默认
     \theoremstyle{Problem} % 设定定理风格
     \newtheorem{prob}{题} % 题目
-    \providecommand{\Solution}{解} % 题解环境(sol)中的“解”
-    \providecommand{\Proof}{证} % 证明环境(pf)中的“证”
+    \providecommand{\Solution}{解} % 题解环境 (sol) 中的“解”
+    \providecommand{\Proof}{证} % 证明环境 (pf) 中的“证”
 }
 \DeclareOption{en} % Using English
 {
-    \PassOptionsToPackage{scheme=plain}{ctex} % 阻止ctex宏包过度汉化 Suppress excessive chinesization by ctex package
+    \UsingEnglishtrue
+    \PassOptionsToPackage{scheme=plain}{ctex} % 阻止 ctex 宏包过度汉化 Suppress excessive chinesization by ctex package
     \providecommand{\Name}{Name} % "Name" at the right of the header
     \providecommand{\StudentID}{Student ID} % "Student ID" at the right of the header
     \providecommand{\Grade}{Grade} % "Grade" at the right of the header
@@ -74,7 +77,7 @@
 { } % 定理开头后所接空间尺寸, 空格为默认词间距 % Space after theorem head, whitespace means normal interword space
 {\thmname{#1}} % 定理开头格式 Theorem head spec, being left empty means default
 \makeatletter
-\def\@endtheorem{\qed\endtrivlist\@endpefalse} % 题解后添加qed符号(黑色空心小正方形) % Add qed symbols (black hollow small square) to the end of solutions
+\def\@endtheorem{\qed\endtrivlist\@endpefalse} % 题解后添加 qed 符号 (黑色空心小正方形) % Add qed symbols (black hollow small square) to the end of solutions
 \makeatother
 \theoremstyle{Solution} % 设定定理风格 Set theorem style
 \newtheorem*{sol}{\Solution} % 题解 Solution
@@ -108,9 +111,11 @@
 
 % 其他 Others
 \RequirePackage{ulem} % 各式下划线和删除标记 Various underlines & deletion notes
-\normalem % 避免将意大利斜体(\emph或\em)替换为下划线 Avoiding replacing italics (\emph or \em) with underlines
+\normalem % 避免将意大利斜体 (\emph或\em) 替换为下划线 Avoiding replacing italics (\emph or \em) with underlines
 \RequirePackage{color} % 文本颜色 Text color
 \RequirePackage{hyperref} % 超链接 Hyperlink
+
+
 
 % 页眉和页脚 Header & footer
 \pagestyle{fancy} % 全局页眉和页脚风格 Global header and footer style
@@ -175,7 +180,7 @@
 \providecommand{\muuline}[1]{\text{\uuline{$#1$}}} % 公式内双下划线 Double underlines in equations
 \providecommand{\muwave}[1]{\text{\wave{$#1$}}} % 公式内波浪下划线 Wavy underlines in equations
 \providecommand{\msout}[1]{\text{\sout{$#1$}}} % 公式内删除线 Strickout in equations
-\providecommand{\mxout}[1]{\text{\xout{$#1$}}} % 公式内删除标记(多条斜线) Deletion notes (multiple slash) in equations
+\providecommand{\mxout}[1]{\text{\xout{$#1$}}} % 公式内删除标记 (多条斜线) Deletion notes (multiple slashes) in equations
 \providecommand{\mdashuline}[1]{\text{dashuline{$#1$}}} % 公式内虚下划线 Dashed underlines in equations
 \providecommand{\mdotuline}[1]{\text{\dotuline{$#1$}}} % 公式内点状虚下划线 Dotted underlines in equations
 
