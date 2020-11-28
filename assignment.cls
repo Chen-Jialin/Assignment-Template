@@ -7,9 +7,15 @@
 \LoadClass[a4paper, 10pt]{article} % Load article class with A4 paper and 10pt font
 
 %% Call packages
+\providecommand{\Name}{姓名} % 页眉右“姓名”
+\providecommand{\StudentID}{学号} % 页眉右“学号”
+\providecommand{\Grade}{成绩} % 页眉右“成绩”
 \DeclareOption{en}{
-    \PassOptionsToPackage{scheme=plain}{ctex}
-} % 阻止ctex宏包过度汉化 Suppress excessive chinesization by ctex package
+    \PassOptionsToPackage{scheme=plain}{ctex} % 阻止ctex宏包过度汉化 Suppress excessive chinesization by ctex package
+    \renewcommand{\Name}{Name} % "Name" at the right of the header
+    \renewcommand{\StudentID}{Student ID} % "Student ID" at the right of the header
+    \renewcommand{\Grade}{Grade} % "Grade" at the right of the header
+}
 \ProcessOptions\relax
 \RequirePackage[UTF8]{ctex} % 中文支持 Chinese support
 
@@ -53,40 +59,31 @@
 % 页眉和页脚 Header & footer
 \pagestyle{fancy} % 全局页眉和页脚风格 Global header and footer style
 \fancyhf{} % 清除预设的页眉和页脚 Clear default header and footer
-% #1 风格：缺省 - 中文风格；星号（*）- 英文风格 Style: default - Chinese style; star sign (*) - English style
-% #2 课程名称 Course name
-% #3 课程代码 Course code
-% #4 学期 Semeter
-% #5 项目标题 Project title
-% #6 项目副标题或补充信息 Project subtitle / supplementary information
-% #7 姓名 Student name
-% #8 学号 Student ID
-\NewDocumentCommand{\ProjectInfos}{ s m m m m m m m }
+% #1 课程名称 Course name
+% #2 课程代码 Course code
+% #3 学期 Semeter
+% #4 项目标题 Project title
+% #5 项目副标题或补充信息 Project subtitle / supplementary information
+% #6 姓名 Student name
+% #7 学号 Student ID
+\NewDocumentCommand{\ProjectInfos}{ m m m m m m m }
 {
-    \fancyhead[L]{#2} % 页眉左 Left of the header
-    \fancyhead[C]{#5} % 页眉中 Center of the header
-    \fancyhead[R]{#7} % 页眉右 Right of the header
+    \fancyhead[L]{#1} % 页眉左 Left of the header
+    \fancyhead[C]{#4} % 页眉中 Center of the header
+    \fancyhead[R]{#6} % 页眉右 Right of the header
     \setlength{\headheight}{14pt} % 页眉高 Height of the header
     \fancypagestyle{FirstPage} % 首页页眉 First-page header
     {
         \fancyhf{} % 清除预设的页眉和页脚 Clear default header and footer
-        \fancyhead[L]{#2\\
-            #3\\
-            #4} % 页眉左 Left of the header
-        \fancyhead[C]{{\Huge\bfseries#5}\\
-            #6} % 页眉中 Center of the header
+        \fancyhead[L]{#1\\
+            #2\\
+            #3} % 页眉左 Left of the header
+        \fancyhead[C]{{\Huge\bfseries#4}\\
+            #5} % 页眉中 Center of the header
         \setlength{\headheight}{38pt} % 页眉高 Height of the header
-        \IfBooleanTF{#1}
-        { % Star note (*) - English-style right of the first-page header
-            \fancyhead[R]{Name : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#7}\\
-                Student ID : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#8}\\
-                Grade : \underline{\makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{}}} % Right of the header
-        }
-        { % 无星号（*）- 中文风格首页页眉右
-            \fancyhead[R]{姓名 : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#7}\\
-                学号 : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#8}\\
-                成绩 : \underline{\makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{}}} % 页眉右
-        }
+            \fancyhead[R]{\Name{} : \makebox[\maxof{\widthof{#6}}{\widthof{#7}}][s]{#6}\\
+                \StudentID{} : \makebox[\maxof{\widthof{#6}}{\widthof{#7}}][s]{#7}\\
+                \Grade{} : \underline{\makebox[\maxof{\widthof{#6}}{\widthof{#7}}][s]{}}} % 页眉右 Right of the header
         \fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右：<当前页码> / <总页数> Right of the footer: <current page number> / <total page number>
     }
     \thispagestyle{FirstPage} % 设置首页页眉风格为FirstPage Set header style of first page to be FirstPage
