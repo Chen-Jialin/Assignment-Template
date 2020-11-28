@@ -2,9 +2,15 @@
 \ProvidesClass{assignment}[2020/09/08 Class for assignments]
 
 %% Load class
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
+\ProcessOptions\relax
 \LoadClass[a4paper, 10pt]{article} % Load article class with A4 paper and 10pt font
 
 %% Call packages
+\DeclareOption{en}{
+    \PassOptionsToPackage{scheme=plain}{ctex}
+} % 阻止ctex宏包过度汉化 Suppress excessive chinesization by ctex package
+\ProcessOptions\relax
 \RequirePackage[UTF8]{ctex} % 中文支持 Chinese support
 
 \RequirePackage[vmargin=1in,hmargin=.5in]{geometry} % 页边距 Page margin
@@ -44,8 +50,6 @@
 \RequirePackage{color} % 文本颜色 Text color
 \RequirePackage{hyperref} % 超链接 Hyperlink
 
-\providecommand{\UsingEnglish}{\ctexset{today={old},contentsname={Content}, listfigurename={Figure List}, listtablename={Table List}, figurename={Figure}, tablename={Table}, abstractname={Abstract}, indexname={Index}, appendixname={Appendix}, bibname={References}, proofname={Proof}}} % 阻止ctex宏包过度汉化 Suppress excessive chinesization by ctex package
-
 % 页眉和页脚 Header & footer
 \pagestyle{fancy} % 全局页眉和页脚风格 Global header and footer style
 \fancyhf{} % 清除预设的页眉和页脚 Clear default header and footer
@@ -62,7 +66,7 @@
     \fancyhead[L]{#2} % 页眉左 Left of the header
     \fancyhead[C]{#5} % 页眉中 Center of the header
     \fancyhead[R]{#7} % 页眉右 Right of the header
-    \setlength\headheight{14pt} % 页眉高 Height of the header
+    \setlength{\headheight}{14pt} % 页眉高 Height of the header
     \fancypagestyle{FirstPage} % 首页页眉 First-page header
     {
         \fancyhf{} % 清除预设的页眉和页脚 Clear default header and footer
@@ -71,7 +75,7 @@
             #4} % 页眉左 Left of the header
         \fancyhead[C]{{\Huge\bfseries#5}\\
             #6} % 页眉中 Center of the header
-        \setlength\headheight{38pt} % 页眉高 Height of the header
+        \setlength{\headheight}{38pt} % 页眉高 Height of the header
         \IfBooleanTF{#1}
         { % Star note (*) - English-style right of the first-page header
             \fancyhead[R]{Name : \makebox[\maxof{\widthof{#7}}{\widthof{#8}}][s]{#7}\\
