@@ -76,6 +76,7 @@
 \normalem % 避免将意大利斜体 (\emph或\em) 替换为下划线 Avoide replacing italics (\emph or \em) with underlines
 \RequirePackage{color} % 文本颜色 Text color
 \RequirePackage{hyperref} % 超链接 Hyperlink
+\RequirePackage{framed}
 
 % 页眉和页脚 Header & footer
 \ifUsingEnglish
