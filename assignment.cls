@@ -3,21 +3,21 @@
 
 % Options
 % 边数模式 Side mode
-\providecommand{\Side}{oneside} % 单边(不分奇偶数页，默认)或双边(区分奇偶数页)模式 oneside (not distinguishing odd or even pages, default) or twoside (distinguishing odd and even pages) mode
-\newif\ifTwoSide % [布尔变量] 是否为双边模式 [Bool] whether twoside mode or not
-\DeclareOption{oneside} % 单边模式 oneside mode
+\providecommand{\Side}{oneside} % 单边(不分奇偶数页，默认)或双边(区分奇偶数页)模式 Oneside (not distinguishing odd or even pages, default) or twoside (distinguishing odd and even pages) mode
+\newif\ifTwoSide % [布尔变量] 是否为双边模式 [Bool] Whether twoside mode or not
+\DeclareOption{oneside} % 单边模式 Oneside mode
 {
     \renewcommand{\Side}{oneside}
     \TwoSidefalse
 }
-\DeclareOption{twoside} % 双边模式 twoside mode
+\DeclareOption{twoside} % 双边模式 Twoside mode
 {
     \renewcommand{\Side}{twoside}
     \TwoSidetrue
 }
 
 % 语言 Language
-\newif\ifUsingEnglish % [布尔变量] 是否使用英语 [Bool] whether using English or not (default)
+\newif\ifUsingEnglish % [布尔变量] 是否使用英语 [Bool] Whether using English or not (default)
 \DeclareOption{zh} % Using Chinese
 {
     \UsingEnglishfalse
@@ -138,8 +138,6 @@
 \providecommand{\sgn}{\,\text{sgn}\,} % 符号函数 Sign function
 \providecommand{\sinc}{\,\text{sinc}\,} % 辛格函数 Sinc function
 \providecommand{\rect}{\,\text{rect}\,} % 矩形函数 Rectangular function
-\providecommand{\bra}[1]{\left\langle#1\right\rvert} % 左矢 Bra
-\providecommand{\ket}[1]{\left\lvert#1\right\rangle} % 右矢 Ket
 \providecommand{\tr}{\,\text{Tr}\,} % 矩阵的迹 Trace of matrix
 
 % 题目和题解风格 Problem and solution style
