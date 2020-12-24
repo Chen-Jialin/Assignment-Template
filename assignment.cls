@@ -17,7 +17,7 @@
 }
 
 % 语言 Language
-\newif\ifUsingEnglish % [布尔变量] 是否使用英语 [Bool] Whether using English or not (default)
+\newif\ifUsingEnglish % [布尔变量] 是否(默认)使用英语 [Bool] Whether using English or not (default)
 \DeclareOption{zh} % Using Chinese
 {
     \UsingEnglishfalse
