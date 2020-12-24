@@ -104,7 +104,7 @@
     \fancyhead[C]{#4} % 页眉中 The center of the header
     \fancyhead[R]{#6} % 页眉右 The right of the header
     \setlength{\headheight}{14pt} % 页眉高 Height of the header
-    \fancypagestyle{FirstPage} % 首页页眉 First-page header
+    \fancypagestyle{FirstPage} % 首页页眉风格 First-page header Style
     {
         \fancyhf{} % 清除预设的页眉和页脚 Clear default header and footer
         \setlength{\headheight}{38pt} % 页眉高 Height of the header
@@ -118,7 +118,7 @@
                 \Grade{} : \underline{\makebox[\maxof{\widthof{#6}}{\widthof{#8}}][s]{}}} % 页眉右 The right of the header
         \fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右: <当前页码> / <总页数> The right of the footer: <current page number> / <total page number>
     }
-    \thispagestyle{FirstPage} % 设置首页页眉风格为FirstPage Set header style of the first page as FirstPage
+    \thispagestyle{FirstPage} % 设置首页页眉风格为 FirstPage Set header style of the first page as FirstPage
 }
 \ifTwoSide
     \fancyfoot[RO]{\thepage\ / \pageref{LastPage}} % 奇数页脚右: <当前页码> / <总页数> The right of odd page footer: <current page number> / <total page number>
