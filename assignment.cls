@@ -128,7 +128,7 @@
 \fi
 
 \allowdisplaybreaks[4] % 公式跨页 Cross-page equations
-\providecommand{\abs}[1]{\left\lvert#1\right\rvert} % 绝对值 Absolute
+\providecommand{\abs}[1]{\left\lvert#1\right\rvert} % 绝对值 Absolute value
 \providecommand{\norm}[1]{\left\lVert#1\right\rVert} % 范数 Norm
 \providecommand{\arcsinh}{\,\mathrm{arcsinh}\,} % 反双曲正弦 Inverse hyperbolic sine
 \providecommand{\arccosh}{\,\mathrm{arccosh}\,} % 反双曲余弦 Inverse hyperbolic cosine
