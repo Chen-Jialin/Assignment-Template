@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{assignment}[2020/09/08 Class for assignments]
 
-% Options
+%% Options
 % 边数模式 Side mode
 \providecommand{\Side}{oneside} % 单边(不分奇偶数页，默认)或双边(区分奇偶数页)模式 Oneside (not distinguishing odd or even pages, default) or twoside (distinguishing odd and even pages) mode
 \newif\ifTwoSide % [布尔变量] 是否为双边模式 [Bool] Whether twoside mode or not
@@ -18,7 +18,7 @@
 
 % 语言 Language
 \newif\ifUsingEnglish % [布尔变量] 是否(默认)使用英语 [Bool] Whether using English or not (default)
-\DeclareOption{zh} % Using Chinese
+\DeclareOption{zh} % 使用中文
 {
     \UsingEnglishfalse
     \PassOptionsToPackage{scheme=chinese}{ctex} % 用 ctex 宏包汉化文档结构 Chinesize the structure of the file with ctex package
