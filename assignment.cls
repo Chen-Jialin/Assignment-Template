@@ -122,7 +122,7 @@
 }
 \ifTwoSide
     \fancyfoot[RO]{\thepage\ / \pageref{LastPage}} % 奇数页脚右: <当前页码> / <总页数> The right of odd page footer: <current page number> / <total page number>
-    \fancyfoot[LE]{\thepage\ / \pageref{LastPage}} % 偶数页脚左: <当前页码> / <总页数> The right of even page footer: <current page number> / <total page number>
+    \fancyfoot[LE]{\thepage\ / \pageref{LastPage}} % 偶数页脚左: <当前页码> / <总页数> The left of even page footer: <current page number> / <total page number>
 \else
     \fancyfoot[R]{\thepage\ / \pageref{LastPage}} % 页脚右: <当前页码> / <总页数> The right of the footer: <current page number> / <total page number>
 \fi
