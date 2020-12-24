@@ -191,7 +191,7 @@
 \providecommand{\muwave}[1]{\text{\wave{$#1$}}} % 公式内波浪下划线 Wavy underlines in equations
 \providecommand{\msout}[1]{\text{\sout{$#1$}}} % 公式内删除线 Strickout in equations
 \providecommand{\mxout}[1]{\text{\xout{$#1$}}} % 公式内删除标记 (多条斜线) Deletion notes (multiple slashes) in equations
-\providecommand{\mdashuline}[1]{\text{dashuline{$#1$}}} % 公式内虚下划线 Dashed underlines in equations
+\providecommand{\mdashuline}[1]{\text{\dashuline{$#1$}}} % 公式内虚下划线 Dashed underlines in equations
 \providecommand{\mdotuline}[1]{\text{\dotuline{$#1$}}} % 公式内点状虚下划线 Dotted underlines in equations
 
 % 插入代码风格 Inserted code style
