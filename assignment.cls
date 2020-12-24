@@ -76,7 +76,7 @@
 \normalem % 避免将意大利斜体 (\emph或\em) 替换为下划线 Avoide replacing italics (\emph or \em) with underlines
 \RequirePackage{color} % 文本颜色 Text color
 \RequirePackage{hyperref} % 超链接 Hyperlink
-\RequirePackage{framed}
+\RequirePackage{framed} % 文本加框 Framed text
 
 % 页眉和页脚 Header & footer
 \ifUsingEnglish
@@ -130,15 +130,15 @@
 \allowdisplaybreaks[4] % 公式跨页 Cross-page equations
 \providecommand{\abs}[1]{\left\lvert#1\right\rvert} % 绝对值 Absolute
 \providecommand{\norm}[1]{\left\lVert#1\right\rVert} % 范数 Norm
-\providecommand{\arcsinh}{\,\text{arcsinh}\,} % 反双曲正弦 Inverse hyperbolic sine
-\providecommand{\arccosh}{\,\text{arccosh}\,} % 反双曲余弦 Inverse hyperbolic cosine
-\providecommand{\arctanh}{\,\text{arctanh}\,} % 反双曲正切 Inverse hyperbolic tangent
-\providecommand{\re}{\,\text{Re}\,} % 复数的实部 Real part of complex number
-\providecommand{\im}{\,\text{Im}\,} % 复数的虚部 Imaginary part of complex number
-\providecommand{\sgn}{\,\text{sgn}\,} % 符号函数 Sign function
-\providecommand{\sinc}{\,\text{sinc}\,} % 辛格函数 Sinc function
-\providecommand{\rect}{\,\text{rect}\,} % 矩形函数 Rectangular function
-\providecommand{\tr}{\,\text{Tr}\,} % 矩阵的迹 Trace of matrix
+\providecommand{\arcsinh}{\,\mathrm{arcsinh}\,} % 反双曲正弦 Inverse hyperbolic sine
+\providecommand{\arccosh}{\,\mathrm{arccosh}\,} % 反双曲余弦 Inverse hyperbolic cosine
+\providecommand{\arctanh}{\,\mathrm{arctanh}\,} % 反双曲正切 Inverse hyperbolic tangent
+\providecommand{\re}{\,\mathrm{Re}\,} % 复数的实部 Real part of complex number
+\providecommand{\im}{\,\mathrm{Im}\,} % 复数的虚部 Imaginary part of complex number
+\providecommand{\sgn}{\,\mathrm{sgn}\,} % 符号函数 Sign function
+\providecommand{\sinc}{\,\mathrm{sinc}\,} % 辛格函数 Sinc function
+\providecommand{\rect}{\,\mathrm{rect}\,} % 矩形函数 Rectangular function
+\providecommand{\tr}{\,\mathrm{Tr}\,} % 矩阵的迹 Trace of matrix
 
 % 题目和题解风格 Problem and solution style
 \ifUsingEnglish
