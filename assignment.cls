@@ -4,7 +4,7 @@
 %% Options
 % 边数模式 Side mode
 \providecommand{\Side}{oneside} % 单边(不分奇偶数页，默认)或双边(区分奇偶数页)模式 Oneside (not distinguishing odd or even pages, default) or twoside (distinguishing odd and even pages) mode
-\newif\ifTwoSide % [布尔变量] 是否为双边模式 [Bool] Whether twoside mode or not
+\newif\ifTwoSide % [布尔变量] 是否为双边模式 [Bool] Whether twoside mode or not (default)
 \DeclareOption{oneside} % 单边模式 Oneside mode
 {
     \renewcommand{\Side}{oneside}
@@ -45,8 +45,8 @@
 % 自定义页眉和页脚 Header and footer customization
 \RequirePackage{fancyhdr} % 页眉和页脚 Header & footer
 \RequirePackage{xparse} % 多可选参数的自定义命令 Newcommand with multiple optional arguements
-\RequirePackage{lastpage} % 返回末页页码 Return the page number of the last page
-\RequirePackage{calc} % 返回文本宽度 Return the width of the text
+\RequirePackage{lastpage} % 返回末页页码 Return page number of the last page
+\RequirePackage{calc} % 返回文本宽度 Return width of text
 
 % 数学公式 Mathematical equations
 \RequirePackage{amsmath, amssymb, amsthm, bm} % 基础数学支持, 特殊数学符号, 自定义定理, 公式内加粗 Basic math support, special math symbols, theorem customization, bold in equations
@@ -104,7 +104,7 @@
     \fancyhead[C]{#4} % 页眉中 The center of the header
     \fancyhead[R]{#6} % 页眉右 The right of the header
     \setlength{\headheight}{14pt} % 页眉高 Height of the header
-    \fancypagestyle{FirstPage} % 首页页眉风格 First-page header Style
+    \fancypagestyle{FirstPage} % 首页页眉和页脚风格 First-page header and footer Style
     {
         \fancyhf{} % 清除预设的页眉和页脚 Clear default header and footer
         \setlength{\headheight}{38pt} % 页眉高 Height of the header

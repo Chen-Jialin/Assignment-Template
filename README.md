@@ -33,7 +33,7 @@ It is bilingual and supporting functions including
 
 Both pdf$\LaTeX$ and Xe$\LaTeX$ work.
 
-自定义题目、题解、证明环境，自定义绝对值（`\abs{}`）、左矢（`\bra{}`）、右矢（`\ket{}`）等数学、物理专业常用符号.
+自定义题目、题解、证明环境，自定义绝对值（`\abs{}`）等数学、物理专业常用符号.
 
 Customized environments of problems, solutions and proofs; customized operators common used in mathematics and physics such as absolute value (`\abs{}`), bra (`\bra{}`), ket (`\ket{}`), etc.
 
