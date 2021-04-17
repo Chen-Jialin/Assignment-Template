@@ -8,6 +8,7 @@
         \begin{itemize}
             \item[(1)] 数学公式；
             \item[(2)] 化学反应方程式.
+            % \item[(3)] 量子线路图.
         \end{itemize}
     \end{prob}
     \begin{pf}
@@ -21,11 +22,19 @@
             \begin{equation}
                 \ce{\chemfig{*6([,.5]-=-=-=)} + \chemfig{[,.75]HO-NO_2} ->[\mbox{浓硫酸}][$\Delta$] \chemfig{*6([,.5]-=-(-NO_2)=-=)} + H2O}
             \end{equation}
+            % \item[(3)] 量子傅里叶变换的线路图为
+            % \begin{center}
+            %     \begin{quantikz}
+            %         \lstick{$q_0$} & \gate{H} & \gate{\begin{array}{c}P\\\pi/8\end{array}} & \gate{\begin{array}{c}P\\\pi/4\end{array}} & \gate{\begin{array}{c}P\\\pi/2\end{array}} & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+            %         \lstick{$q_1$} & \qw & \qw & \qw & \ctrl{-1} & \gate{H} & \gate{\begin{array}{c}P\\\pi/4\end{array}} & \gate{\begin{array}{c}P\\\pi/2\end{array}} & \qw & \qw & \qw & \qw\\
+            %         \lstick{$q_2$} & \qw & \qw & \ctrl{-2} & \qw & \qw & \qw & \ctrl{-1} & \gate{H} & \gate{\begin{array}{c}P\\\pi/2\end{array}} & \qw & \qw\\
+            %         \lstick{$q_3$} & \qw & \ctrl{-3} & \qw & \qw & \qw & \ctrl{-2} & \qw & \qw & \ctrl{-1} & \gate{H} & \qw
+            %     \end{quantikz}
+            % \end{center}
         \end{itemize}
     \end{pf}
 
     \clearpage
-
     \begin{prob}
         请完成以下操作：
         \begin{itemize}

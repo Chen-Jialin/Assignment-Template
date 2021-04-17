@@ -10,6 +10,7 @@
 - 中英双语
 - 数学公式
 - 图表
+- 量子线路图（会影响长表格环境）
 - 化学式
 - 程序代码
 - 文献引用
@@ -25,6 +26,7 @@ It is bilingual and supports functions including
 - mathematical formulas
 - figures
 - tables
+- quantum circuit diagram (may affect longtable environment)
 - chemistry formulas
 - program code
 - reference citing

@@ -8,6 +8,7 @@
         \begin{itemize}
             \item[(1)] Mathematical formulas;
             \item[(2)] Chemistry formulas.
+            % \item[(3)] Quantum circuit diagram.
         \end{itemize}
     \end{prob}
     \begin{pf}
@@ -21,6 +22,15 @@
             \begin{equation}
                 \ce{\chemfig{*6([,.5]-=-=-=)} + \chemfig{[,.75]HO-NO_2} ->[\mbox{concentrated }H2SO4][$\Delta$] \chemfig{*6([,.5]-=-(-NO_2)=-=)} + H2O}
             \end{equation}
+            % \item[(3)] The circuit of quantum Fourier transform is
+            % \begin{center}
+            %     \begin{quantikz}
+            %         \lstick{$q_0$} & \gate{H} & \gate{\begin{array}{c}P\\\pi/8\end{array}} & \gate{\begin{array}{c}P\\\pi/4\end{array}} & \gate{\begin{array}{c}P\\\pi/2\end{array}} & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+            %         \lstick{$q_1$} & \qw & \qw & \qw & \ctrl{-1} & \gate{H} & \gate{\begin{array}{c}P\\\pi/4\end{array}} & \gate{\begin{array}{c}P\\\pi/2\end{array}} & \qw & \qw & \qw & \qw\\
+            %         \lstick{$q_2$} & \qw & \qw & \ctrl{-2} & \qw & \qw & \qw & \ctrl{-1} & \gate{H} & \gate{\begin{array}{c}P\\\pi/2\end{array}} & \qw & \qw\\
+            %         \lstick{$q_3$} & \qw & \ctrl{-3} & \qw & \qw & \qw & \ctrl{-2} & \qw & \qw & \ctrl{-1} & \gate{H} & \qw
+            %     \end{quantikz}
+            % \end{center}
         \end{itemize}
     \end{pf}
 
