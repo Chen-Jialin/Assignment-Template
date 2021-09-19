@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{assignment}[2020/09/08 Class for assignments]
 
-%% Options
+%% 选项 Options
 % 边数模式 Side mode
 \providecommand{\Side}{oneside}% 单边(不分奇偶数页，默认)或双边(区分奇偶数页)模式 Oneside (not distinguishing odd or even pages, default) or twoside (distinguishing odd and even pages) mode
 \newif\ifTwoSide% [布尔变量] 是否为双边模式 [Bool] Whether twoside mode or not (default)
@@ -34,10 +34,10 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 
-%% Load class
+%% 加载文档类 Load class
 \LoadClass[a4paper, \Side, 10pt]{article}% 加载纸张大小为 A4, \Side 模式, 字号为 10 号的 article 类 Load article class with A4 paper, \Side style and 10pt font
 
-%% Call packages
+%% 调用宏包 Call packages
 \RequirePackage[UTF8]{ctex}% 中文支持 Chinese support
 
 \RequirePackage[vmargin=1in,hmargin=.5in]{geometry}% 页边距 Page margin
