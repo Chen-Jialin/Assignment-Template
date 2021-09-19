@@ -79,6 +79,7 @@
 \RequirePackage{color} % 文本颜色 Text color
 \RequirePackage{hyperref} % 超链接 Hyperlink
 \RequirePackage{framed} % 文本加框 Framed text
+\RequirePackage{footmisc} % 脚注引用 Footnote reference
 
 % 页眉和页脚 Header & footer
 \ifUsingEnglish
@@ -181,7 +182,7 @@
 {} % 定理缩进量 Theorem indent amount
 {\bfseries} % 定理开头字体 Theorem head font
 {:} % 定理开头后所接标点 Punctuation after theorem head
-{ } % 定理开头后所接空间尺寸, 空格为默认词间距 % Space after theorem head, whitespace means normal interword space
+{ } % 定理开头后所接空间尺寸, 空格为默认词间距 Space after theorem head, whitespace means normal interword space
 {\thmname{#1}} % 定理开头格式 Theorem head spec, being left empty means default
 \makeatletter
 \def\@endtheorem{\qed\endtrivlist\@endpefalse} % 题解后添加 qed 符号 (黑色空心小正方形) % Add qed symbols (black hollow small square) to the end of solutions
