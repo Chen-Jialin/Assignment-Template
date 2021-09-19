@@ -156,6 +156,7 @@
     \theoremstyle{Problem} % Set theorem style
     \newtheorem{prob}{Problem} % Problem
     \providecommand{\Solution}{Solution} % "Solution" in solution environment (sol)
+    \providecommand{\Answer}{Answer} % "Answer" in answer environment (ans)
     \providecommand{\Proof}{Proof} % "Proof" in proof environment (pf)
 \else
     \newtheoremstyle{Problem} % 定理风格名称
@@ -170,6 +171,7 @@
     \theoremstyle{Problem} % 设定定理风格
     \newtheorem{prob}{题} % 题目
     \providecommand{\Solution}{解} % 题解环境 (sol) 中的“解”
+    \providecommand{\Answer}{答} % 回答环境 (ans) 中的“答”
     \providecommand{\Proof}{证} % 证明环境 (pf) 中的“证”
 \fi
 \newtheoremstyle{Solution} % 定理风格名称 Theorem style name
@@ -186,6 +188,7 @@
 \makeatother
 \theoremstyle{Solution} % 设定定理风格 Set theorem style
 \newtheorem*{sol}{\Solution} % 题解 Solution
+\newtheorem*{ans}{\Answer} % 回答 Answer
 \newtheorem*{pf}{\Proof} % 证明 Proof
 
 \providecommand{\muline}[1]{\text{\uline{$#1$}}} % 公式内下划线 Underlines in equations
