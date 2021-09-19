@@ -185,7 +185,7 @@
 { } % 定理开头后所接空间尺寸, 空格为默认词间距 Space after theorem head, whitespace means normal interword space
 {\thmname{#1}} % 定理开头格式 Theorem head spec, being left empty means default
 \makeatletter
-\def\@endtheorem{\qed\endtrivlist\@endpefalse} % 题解后添加 qed 符号 (黑色空心小正方形) % Add qed symbols (black hollow small square) to the end of solutions
+\def\@endtheorem{\qed\endtrivlist\@endpefalse} % 题解末尾添加 qed 符号 (黑色空心小正方形) % Add qed symbols (black hollow small square) to the end of solutions
 \makeatother
 \theoremstyle{Solution} % 设定定理风格 Set theorem style
 \newtheorem*{sol}{\Solution} % 题解 Solution
