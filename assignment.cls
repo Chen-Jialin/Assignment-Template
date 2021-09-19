@@ -49,7 +49,7 @@
 \RequirePackage{calc} % 返回文本宽度 Return width of text
 
 % 数学公式 Mathematical equations
-\RequirePackage{amsmath, amssymb, amsthm, bm} % 基础数学支持, 特殊数学符号, 自定义定理, 公式内加粗 Basic math support, special math symbols, theorem customization, bold in equations
+\RequirePackage{amsmath, amssymb, amsthm, bm, mathtools} % 基础数学支持, 特殊数学符号, 自定义定理, 公式内加粗 Basic math support, special math symbols, theorem customization, bold in equations
 \RequirePackage{mathrsfs} % 公式内花体字母 Non-CM calligraphic letters in equations
 \RequirePackage{esint} % 特殊积分号 Special integral signs
 
