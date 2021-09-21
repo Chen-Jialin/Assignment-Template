@@ -137,11 +137,12 @@
 \providecommand{\arccosh}{\,\mathrm{arccosh}\,}% 反双曲余弦 Inverse hyperbolic cosine
 \providecommand{\arctanh}{\,\mathrm{arctanh}\,}% 反双曲正切 Inverse hyperbolic tangent
 \providecommand{\re}{\,\mathrm{Re}\,}% 复数的实部 Real part of complex number
-\providecommand{\im}{\,\mathrm{Im}\,}% 复数的虚部 Imaginary part of complex number
+\providecommand{\im}{\,\mathrm{Im}\,}% 复数的虚部或映射的像 Imaginary part of complex number or image of mapping
 \providecommand{\sgn}{\,\mathrm{sgn}\,}% 符号函数 Sign function
 \providecommand{\sinc}{\,\mathrm{sinc}\,}% 辛格函数 Sinc function
 \providecommand{\rect}{\,\mathrm{rect}\,}% 矩形函数 Rectangular function
 \providecommand{\tr}{\,\mathrm{Tr}\,}% 矩阵的迹 Trace of matrix
+\providecommand{\ker}{\,\mathrm{Ker}\,}% 群同态的核 Kernel of group homomorphism
 
 % 题目和题解风格 Problem and solution style
 \ifUsingEnglish
