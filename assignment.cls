@@ -142,7 +142,6 @@
 \providecommand{\sinc}{\,\mathrm{sinc}\,}% 辛格函数 Sinc function
 \providecommand{\rect}{\,\mathrm{rect}\,}% 矩形函数 Rectangular function
 \providecommand{\tr}{\,\mathrm{Tr}\,}% 矩阵的迹 Trace of matrix
-\providecommand{\ker}{\,\mathrm{Ker}\,}% 群同态的核 Kernel of group homomorphism
 
 % 题目和题解风格 Problem and solution style
 \ifUsingEnglish
