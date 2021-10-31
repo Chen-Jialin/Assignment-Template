@@ -105,7 +105,7 @@
 {
     \fancyhead[L]{#1}% 页眉左 The left of the header
     \fancyhead[C]{#4}% 页眉中 The center of the header
-    \fancyhead[R]{#6}% 页眉右 The right of the header
+    \fancyhead[R]{\href{#7}{#6}}% 页眉右 The right of the header
     \setlength{\headheight}{14pt}% 页眉高 Height of the header
     \fancypagestyle{FirstPage}% 首页页眉和页脚风格 First-page header and footer Style
     {
