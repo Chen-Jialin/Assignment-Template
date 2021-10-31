@@ -133,15 +133,15 @@
 \allowdisplaybreaks[4]% 公式跨页 Cross-page equations
 \providecommand{\abs}[1]{\left\lvert#1\right\rvert}% 绝对值 Absolute value
 \providecommand{\norm}[1]{\left\lVert#1\right\rVert}% 范数 Norm
-\providecommand{\arcsinh}{\,\mathrm{arcsinh}\,}% 反双曲正弦 Inverse hyperbolic sine
-\providecommand{\arccosh}{\,\mathrm{arccosh}\,}% 反双曲余弦 Inverse hyperbolic cosine
-\providecommand{\arctanh}{\,\mathrm{arctanh}\,}% 反双曲正切 Inverse hyperbolic tangent
-\providecommand{\re}{\,\mathrm{Re}\,}% 复数的实部 Real part of complex number
-\providecommand{\im}{\,\mathrm{Im}\,}% 复数的虚部或映射的像 Imaginary part of complex number or image of mapping
-\providecommand{\sgn}{\,\mathrm{sgn}\,}% 符号函数 Sign function
-\providecommand{\sinc}{\,\mathrm{sinc}\,}% 辛格函数 Sinc function
-\providecommand{\rect}{\,\mathrm{rect}\,}% 矩形函数 Rectangular function
-\providecommand{\tr}{\,\mathrm{Tr}\,}% 矩阵的迹 Trace of matrix
+\DeclareMathOperator{\arcsinh}{arcsinh}% 反双曲正弦 Inverse hyperbolic sine
+\DeclareMathOperator{\arccosh}{arccosh}% 反双曲余弦 Inverse hyperbolic cosine
+\DeclareMathOperator{\arctanh}{arctanh}% 反双曲正切 Inverse hyperbolic tangent
+\DeclareMathOperator{\re}{Re}% 复数的实部 Real part of complex number
+\DeclareMathOperator{\im}{Im}% 复数的虚部或映射的像 Imaginary part of complex number or image of mapping
+\DeclareMathOperator{\sgn}{sgn}% 符号函数 Sign function
+\DeclareMathOperator{\sinc}{sinc}% 辛格函数 Sinc function
+\DeclareMathOperator{\rect}{rect}% 矩形函数 Rectangular function
+\DeclareMathOperator{\tr}{Tr}% 矩阵的迹 Trace of matrix
 
 % 题目和题解风格 Problem and solution style
 \ifUsingEnglish
