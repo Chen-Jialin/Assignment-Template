@@ -200,6 +200,8 @@
 \providecommand{\mdashuline}[1]{\text{\dashuline{$#1$}}}% 公式内虚下划线 Dashed underlines in equations
 \providecommand{\mdotuline}[1]{\text{\dotuline{$#1$}}}% 公式内点状虚下划线 Dotted underlines in equations
 
+\graphicspath{{Figures/}}
+
 % 插入代码风格 Inserted code style
 \lstset
 {
