@@ -3,7 +3,7 @@
 
 %% 选项 Options
 % 边数模式 Side mode
-\providecommand{\Side}{oneside}% 单边(不分奇偶数页，默认)或双边(区分奇偶数页)模式 Oneside (not distinguishing odd or even pages, default) or twoside (distinguishing odd and even pages) mode
+\providecommand{\Side}{oneside}% 单边 (不分奇偶数页, 默认) 或双边 (区分奇偶数页) 模式 Oneside (not distinguishing odd or even pages, default) or twoside (distinguishing odd and even pages) mode
 \newif\ifTwoSide% [布尔变量] 是否为双边模式 [Bool] Whether twoside mode or not (default)
 \DeclareOption{oneside}% 单边模式 Oneside mode
 {
@@ -17,7 +17,7 @@
 }
 
 % 语言 Language
-\newif\ifUsingEnglish% [布尔变量] 是否(默认)使用英语 [Bool] Whether using English or not (default)
+\newif\ifUsingEnglish% [布尔变量] 是否 (默认) 使用英语 [Bool] Whether using English or not (default)
 \DeclareOption{zh}% 使用中文
 {
     \UsingEnglishfalse
@@ -75,7 +75,7 @@
 
 % 其他 Others
 \RequirePackage{ulem}% 各式下划线和删除标记 Various underlines & deletion notes
-\normalem% 避免将意大利斜体 (\emph或\em) 替换为下划线 Avoide replacing italics (\emph or \em) with underlines
+\normalem% 避免将意大利斜体 (\emph 或 \em) 替换为下划线 Avoide replacing italics (\emph or \em) with underlines
 \RequirePackage{color}% 文本颜色 Text color
 \RequirePackage{hyperref}% 超链接 Hyperlink
 \RequirePackage{framed}% 文本加框 Framed text
@@ -87,9 +87,9 @@
     \providecommand{\StudentID}{Student ID}% "Student ID" at the right of the header
     \providecommand{\Grade}{Grade}% "Grade" at the right of the header
 \else
-    \providecommand{\Name}{姓名}% 页眉右“姓名”
-    \providecommand{\StudentID}{学号}% 页眉右“学号”
-    \providecommand{\Grade}{成绩}% 页眉右“成绩”
+    \providecommand{\Name}{姓名}% 页眉右 "姓名"
+    \providecommand{\StudentID}{学号}% 页眉右 "学号"
+    \providecommand{\Grade}{成绩}% 页眉右 "成绩"
 \fi
 \pagestyle{fancy}% 全局页眉和页脚风格 Global header and footer style
 \fancyhf{}% 清除预设的页眉和页脚 Clear default header and footer
@@ -171,9 +171,9 @@
     {第\thmnumber{ #2}\thmname{ #1}\thmnote{ (#3)} 得分: \underline{\qquad\qquad}}% 定理开头格式, 留空为默认
     \theoremstyle{Problem}% 设定定理风格
     \newtheorem{prob}{题}% 题目
-    \providecommand{\Solution}{解}% 题解环境 (sol) 中的“解”
-    \providecommand{\Answer}{答}% 回答环境 (ans) 中的“答”
-    \providecommand{\Proof}{证}% 证明环境 (pf) 中的“证”
+    \providecommand{\Solution}{解}% 题解环境 (sol) 中的 "解"
+    \providecommand{\Answer}{答}% 回答环境 (ans) 中的 "答"
+    \providecommand{\Proof}{证}% 证明环境 (pf) 中的 "证"
 \fi
 \newtheoremstyle{Solution}% 定理风格名称 Theorem style name
 {}% 定理上方空间尺寸, 留空为默认 Space above theorem, being left empty means default
@@ -185,7 +185,7 @@
 { }% 定理开头后所接空间尺寸, 空格为默认词间距 Space after theorem head, whitespace means normal interword space
 {\thmname{#1}}% 定理开头格式 Theorem head spec, being left empty means default
 \makeatletter
-\def\@endtheorem{\qed\endtrivlist\@endpefalse}% 题解末尾添加 qed 符号 (黑色空心小正方形)% Add qed symbols (black hollow small square) to the end of solutions
+\def\@endtheorem{\qed\endtrivlist\@endpefalse}% 题解末尾添加 QED 符号 (黑色空心小正方形)% Add QED symbols (black hollow small square) to the end of solutions
 \makeatother
 \theoremstyle{Solution}% 设定定理风格 Set theorem style
 \newtheorem*{sol}{\Solution}% 题解 Solution
