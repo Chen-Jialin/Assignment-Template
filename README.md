@@ -49,6 +49,8 @@ Customized environments of problems, solutions and proofs; customized operators 
 4. 已添加支持数学公式、图表、化学式、程序代码、文献引用等的宏包，仿照示例文件 `Assignment-zh*` 使用即可；
 5. 用 pdf$\LaTeX$ 或 Xe$\LaTeX$ 编译. 因引用了末页页码，因此需连续编译两次. 如有文献引用，按照 pdf$\LaTeX\rightarrow$bib$\TeX\rightarrow$pdf$\LaTeX\rightarrow$pdf$\LaTeX$ 或 Xe$\LaTeX\rightarrow$bib$\TeX\rightarrow$Xe$\LaTeX\rightarrow$Xe$\LaTeX$ 顺序编译.
 
+**注意**: 若 `ctex` 包依赖字体缺失, 则将导致 `Critical Package ctex: CTeX fontset 'fandol' is unavailable in current (ctex) mode.` 报错, 此时请选择 Xe$\LaTeX$ 编译.
+
 #### English version:
 0. Make sure that this class file `assignment.cls` is in the same path as `*.tex` file;
 1. Call the assignment template class with `\documentclass[en]{assignment}` at the beginning of `*.tex` file;
@@ -56,6 +58,8 @@ Customized environments of problems, solutions and proofs; customized operators 
 3. Call environments of problems, solutions and proofs with `\begin{prob}...\end{prob}`, `\begin{sol}...\end{sol}` and `\begin{pf}...\end{pf}`, respectively;
 4. Packages for mathematical formulas, figures, tables, chemistry formulas, reference citing have been included. See their usages in example files `Assignment-en.*`;
 5. Compile with pdf$\LaTeX$ or Xe$\LaTeX$. Need to compile twice because of references to the page number of the last page. Compile in the order of pdf$\LaTeX\rightarrow$bib$\TeX\rightarrow$pdf$\LaTeX\rightarrow$pdf$\LaTeX$ or Xe$\LaTeX\rightarrow$bib$\TeX\rightarrow$Xe$\LaTeX\rightarrow$Xe$\LaTeX$, if there is any reference citing.
+
+**Attention**: Lack of dependent fonts for `ctex` package will cause error `Critical Package ctex: CTeX fontset 'fandol' is unavailable in current (ctex) mode.`. Then please compile with Xe$\LaTeX$
 
 ## 效果展示 Examples
 

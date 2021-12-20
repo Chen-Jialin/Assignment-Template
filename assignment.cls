@@ -168,7 +168,7 @@
     {\bfseries}% 定理开头字体
     {.}% 定理开头后所接标点
     { }% 定理开头后所接空间尺寸, 空格为默认词间距
-    {第\thmnumber{ #2}\thmname{ #1}\thmnote{ (#3)} 得分: \underline{\qquad\qquad}}% 定理开头格式, 留空为默认
+    {第\thmnumber{ #2}\thmname{ #1 }\thmnote{ (#3)} 得分: \underline{\qquad\qquad}}% 定理开头格式, 留空为默认
     \theoremstyle{Problem}% 设定定理风格
     \newtheorem{prob}{题}% 题目
     \providecommand{\Solution}{解}% 题解环境 (sol) 中的 "解"
