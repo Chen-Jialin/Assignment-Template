@@ -100,7 +100,7 @@
 % #5 项目副标题或补充信息 Project subtitle / supplementary information
 % #6 姓名 Student name
 % #7 姓名上的超链接 Hyperlink on student name
-% #7 学号 Student ID
+% #8 学号 Student ID
 \NewDocumentCommand{\ProjectInfos}{ m m m m m m O{https://github.com/Chen-Jialin} m }
 {
     \fancyhead[L]{#1}% 页眉左 The left of the header
@@ -116,9 +116,9 @@
             #3}% 页眉左 The left of the header
         \fancyhead[C]{{\Huge\bfseries#4}\\
             #5}% 页眉中 The center of the header
-            \fancyhead[R]{\Name{} : \makebox[\maxof{\widthof{#6}}{\widthof{#8}}][s]{\href{#7}{#6}}\\
-                \StudentID{} : \makebox[\maxof{\widthof{#6}}{\widthof{#8}}][s]{#8}\\
-                \Grade{} : \underline{\makebox[\maxof{\widthof{#6}}{\widthof{#8}}][s]{}}}% 页眉右 The right of the header
+        \fancyhead[R]{\Name{} : \makebox[\maxof{\widthof{#6}}{\widthof{#8}}][s]{\href{#7}{#6}}\\
+            \StudentID{} : \makebox[\maxof{\widthof{#6}}{\widthof{#8}}][s]{#8}\\
+            \Grade{} : \underline{\makebox[\maxof{\widthof{#6}}{\widthof{#8}}][s]{}}}% 页眉右 The right of the header
         \fancyfoot[R]{\thepage\ / \pageref{LastPage}}% 页脚右: <当前页码> / <总页数> The right of the footer: <current page number> / <total page number>
     }
     \thispagestyle{FirstPage}% 设置首页页眉风格为 FirstPage Set header style of the first page as FirstPage
