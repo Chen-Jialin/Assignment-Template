@@ -205,12 +205,15 @@
 % 插入代码风格 Inserted code style
 \lstset
 {
-    numbers=left,% 在左侧添加行号 Add line numbers at left
-    frame=single,% 用单线框围绕代码 Enclose code with single-line frames
-    breaklines=true,% 自动折行 Automatic line wrapping
-    showspaces=true,% 显示空格 Show spaces
+    upquote=true,% 左右引号输出为 ‘’ (false) 或 `' (true) Print left and right quote as ‘’ or `'
     showtabs=true,% 显示制表符 Show tabs
-    tab=\rightarrowfill% 用右箭头填充制表符 Fill tabs with right arrows
+    tab=\rightarrowfill,% 用右箭头填充制表符 Fill tabs with right arrows
+    showspaces=false,% 显示空格 Show blank spaces
+    showstringspaces=false,% 显示字符串中空格 Show blank spaces in string
+    numbers=left,% 在左侧添加行号 Add line numbers at left
+    breaklines=true,% 自动折行 Automatic line wrapping
+    breakatwhitespace=true,% Break lines only at white space
+    frame=single% 用单线框围绕代码 Enclose code with single-line frames
 }
 
 % 超链接自动换行 Hyperlink automatic line wrapping
