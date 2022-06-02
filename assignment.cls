@@ -104,9 +104,16 @@
 % #8 学号 Student ID
 \NewDocumentCommand{\ProjectInfos}{ m m m m m m O{https://github.com/Chen-Jialin} m }
 {
-    \fancyhead[L]{#1}% 页眉左 The left of the header
     \fancyhead[C]{#4}% 页眉中 The center of the header
-    \fancyhead[R]{\href{#7}{#6}}% 页眉右 The right of the header
+    \ifTwoSide
+        \fancyfoot[LO]{\href{#7}{#6}}% 奇数页眉左 The left of odd page header
+        \fancyfoot[RO]{#1}% 奇数页眉右 The right of odd page header
+        \fancyfoot[LE]{#1}% 偶数页眉左 The left of even page header
+        \fancyfoot[RE]{\href{#7}{#6}}% 偶数页眉右 The right of even page header
+    \else
+        \fancyhead[L]{#1}% 页眉左 The left of the header
+        \fancyhead[R]{\href{#7}{#6}}% 页眉右 The right of the header
+    \fi
     \setlength{\headheight}{14pt}% 页眉高 Height of the header
     \fancypagestyle{FirstPage}% 首页页眉和页脚风格 First-page header and footer Style
     {
