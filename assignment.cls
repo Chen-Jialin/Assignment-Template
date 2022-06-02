@@ -106,10 +106,10 @@
 {
     \fancyhead[C]{#4}% 页眉中 The center of the header
     \ifTwoSide
-        \fancyfoot[LO]{\href{#7}{#6}}% 奇数页眉左 The left of odd page header
-        \fancyfoot[RO]{#1}% 奇数页眉右 The right of odd page header
-        \fancyfoot[LE]{#1}% 偶数页眉左 The left of even page header
-        \fancyfoot[RE]{\href{#7}{#6}}% 偶数页眉右 The right of even page header
+        \fancyhead[LO]{\href{#7}{#6}}% 奇数页眉左 The left of odd page header
+        \fancyhead[RO]{#1}% 奇数页眉右 The right of odd page header
+        \fancyhead[LE]{#1}% 偶数页眉左 The left of even page header
+        \fancyhead[RE]{\href{#7}{#6}}% 偶数页眉右 The right of even page header
     \else
         \fancyhead[L]{#1}% 页眉左 The left of the header
         \fancyhead[R]{\href{#7}{#6}}% 页眉右 The right of the header
