@@ -112,7 +112,6 @@
         \fancyhead[RO]{#2}% 奇数页眉右 The right of odd page header
     \else
         \fancyhead[L]{\href{#7}{#6}}% 页眉右 The left of the header
-        \fancyhead[C]{#1}% 页眉中 The center of the header
         \fancyhead[R]{#4}% 页眉右 The right of the header
     \fi
     \setlength{\headheight}{14pt}% 页眉高 Height of the header
