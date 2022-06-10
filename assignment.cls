@@ -106,13 +106,15 @@
 {
     \fancyhead[C]{#4}% 页眉中 The center of the header
     \ifTwoSide
-        \fancyhead[LO]{\href{#7}{#6}}% 奇数页眉左 The left of odd page header
-        \fancyhead[RO]{#1}% 奇数页眉右 The right of odd page header
         \fancyhead[LE]{#1}% 偶数页眉左 The left of even page header
         \fancyhead[RE]{\href{#7}{#6}}% 偶数页眉右 The right of even page header
+        \fancyhead[LO]{#8}% 奇数页眉左 The left of odd page header
+        \fancyhead[RO]{#2}% 奇数页眉右 The right of odd page header
+        \fancyhead[C]{#4}% 页眉中 The center of the header
     \else
-        \fancyhead[L]{#1}% 页眉左 The left of the header
-        \fancyhead[R]{\href{#7}{#6}}% 页眉右 The right of the header
+        \fancyhead[L]{\href{#7}{#6}}% 页眉右 The left of the header
+        \fancyhead[C]{#1}% 页眉中 The center of the header
+        \fancyhead[R]{#4}% 页眉右 The right of the header
     \fi
     \setlength{\headheight}{14pt}% 页眉高 Height of the header
     \fancypagestyle{FirstPage}% 首页页眉和页脚风格 First-page header and footer Style
