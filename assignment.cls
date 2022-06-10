@@ -47,6 +47,7 @@
 \RequirePackage{xparse}% 多可选参数的自定义命令 Newcommand with multiple optional arguements
 \RequirePackage{lastpage}% 返回末页页码 Return page number of the last page
 \RequirePackage{calc}% 返回文本宽度 Return width of text
+% \RequirePackage[fit]{truncate}% 截断过长文本 Truncate overlong text
 
 % 数学公式 Mathematical equations
 \RequirePackage{amsmath, amssymb, amsthm, bm, mathtools}% 基础数学支持, 特殊数学符号, 自定义定理, 公式内加粗 Basic math support, special math symbols, theorem customization, bold in equations
