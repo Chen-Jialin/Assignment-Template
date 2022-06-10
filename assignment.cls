@@ -110,7 +110,6 @@
         \fancyhead[RE]{\href{#7}{#6}}% 偶数页眉右 The right of even page header
         \fancyhead[LO]{#8}% 奇数页眉左 The left of odd page header
         \fancyhead[RO]{#2}% 奇数页眉右 The right of odd page header
-        \fancyhead[C]{#4}% 页眉中 The center of the header
     \else
         \fancyhead[L]{\href{#7}{#6}}% 页眉右 The left of the header
         \fancyhead[C]{#1}% 页眉中 The center of the header
