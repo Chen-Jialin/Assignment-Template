@@ -151,6 +151,7 @@
 \DeclareMathOperator{\sinc}{sinc}% 辛格函数 Sinc function
 \DeclareMathOperator{\rect}{rect}% 矩形函数 Rectangular function
 \DeclareMathOperator{\tr}{Tr}% 矩阵的迹 Trace of matrix
+\DeclareMathOperator{\res}{Res}% 留数 Residue
 
 % 题目和题解风格 Problem and solution style
 \ifUsingEnglish
