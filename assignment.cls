@@ -54,6 +54,7 @@
 \RequirePackage{mathrsfs}% 公式内花体字母 Non-CM calligraphic letters in equations
 \RequirePackage{esint}% 特殊积分号 Special integral signs
 \RequirePackage{siunitx}% 格式化物理量 (包括数值和单位) Formatted physical quantities (including values and units)
+\RequirePackage[thicklines]{cancel}% 公式内删除线 Cancel lines in equations
 
 % 图片 Figures
 \RequirePackage{graphicx}% 插入图片 Insert graphics
